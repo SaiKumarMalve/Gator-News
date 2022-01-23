@@ -8,10 +8,12 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var MongoCN = conectarBD()
+/* MongoCN is an object to conect to DB */
+var MongoCN = ConnectorBD()
 var clientOptions = options.Client().ApplyURI("mongodb+srv://gatorUsers:Gators2023@gator-news.djwv2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-func conectarBD() *mongo.Client {
+/* connectorBD allows the connection to DB*/
+func ConnectorBD() *mongo.Client {
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
 		log.Fatal(err.Error())
@@ -21,17 +23,16 @@ func conectarBD() *mongo.Client {
 	if err != nil {
 		log.Fatal(err.Error())
 		return client
-
 	}
-	log.Println("connection exists in BD")
+	log.Println("Successful Connection with DB")
 	return client
 }
 
+/* Checks connection ping to DB */
 func CheckConnection() int {
 	err := MongoCN.Ping(context.TODO(), nil)
 	if err != nil {
 		return 0
-
 	}
 	return 1
 }
