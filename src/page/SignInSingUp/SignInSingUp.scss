@@ -8,22 +8,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $font-light;
 
     img {
       position: absolute;
       right: -35%;
     }
-
+    div{
+      z-index: 1;
       h2 {
         display: flex;
         align-items: center;
         font-size: 30px;
         margin-bottom: 40px;
         font-weight: bold;
-
-      
+      }
+      svg{
+        margin-right: 20px;
+        font-size:20px;
+        width: 40px !important;
       }
     }
+  }
 
 
   &__right {
