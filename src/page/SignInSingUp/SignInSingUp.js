@@ -58,11 +58,16 @@ function LeftComponent() {
 function RightComponent() {
   return (
     <Col className="signin-signup__right" xs="6">
-      <div>
+      <div class="rightPane">
+      <div class="LogoImage">
       <img src={GatorLogo} alt="GatorLogo"/>
+      </div>
+      <div class="content">
+      
       <h2>Welcome to Gator News!!</h2>
       <Button variant="primary">Register Gator</Button>
-      <Button variant="outline-primary">Log In</Button>
+      <Button variant="primary">Log In</Button>
+      </div>
       </div>
     </Col>
   );
