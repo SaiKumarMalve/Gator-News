@@ -1,12 +1,26 @@
-import React from 'react'
+import React from "react";
 import { Modal } from "react-bootstrap";
- 
-import "./BasicModal.scss"
+import Gator from "../../../assets/png/logo-white.png";
 
-export default function BasicModal(props){
-    return (
-        <div>
-            <h1>BasicModal</h1>
-        </div>
-    )
+import "./BasicModal.scss";
+
+export default function BasicModal(props) {
+  const { show, setShow, children } = props;
+
+  return (
+    <Modal
+      className="basic-modal"
+      show={show}
+      onHide={() => setShow(false)}
+      centered
+      size="lg"
+    >
+      <Modal.Header>
+        <Modal.Title>
+          <img src={Gator} alt="Twittor" />
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>{children}</Modal.Body>
+    </Modal>
+  );
 }
