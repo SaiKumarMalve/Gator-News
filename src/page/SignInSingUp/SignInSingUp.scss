@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     color: $font-light;
-
+    
     img {
       position: absolute;
       right: -35%;
@@ -28,6 +28,9 @@
         font-size:20px;
         width: 40px !important;
       }
+      App{
+        width: 10%;
+      }
     }
   }
 
@@ -44,13 +47,28 @@
       width: 500px;
       margin: 0 auto;
 
+      img{
+        width:200px;
+        margin-bottom: 20px;
+      }
       h2 {
         font-weight: bold;
-        font-size: 40px;
+        font-size: 435px0px;
         margin-bottom: 70px;
       }
 
+      button{
+        display:block;
+        width:100%;
+        border-radius: 50px;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
       
+      &:first-of-type{
+        margin-bottom: 30px;
+      }
     }
   }
 }
