@@ -5,7 +5,7 @@ import {faSearch,faUsers,faComment} from "@fortawesome/free-solid-svg-icons";
 import "./SignInSingUp.scss";
 import BasicModal from "../../components/Modal/BasicModal";
 import GatorLogo from "../../assets/png/logo-white.png";
-
+import SignUpForm from "../../components/SignUpForm"
 export default function SignInSingUp(props) {
   const [showModal, setShowModal] = useState(false);
   const [contentModal, setContentModal] = useState(null);
@@ -56,7 +56,7 @@ function LeftComponent() {
 }
 
 function RightComponent(props) {
-  const { openModal} = props;
+  const { openModal, setShowModal} = props;
   return (
     <Col className="signin-signup__right" xs="6">
       <div class="rightPane">
@@ -68,7 +68,7 @@ function RightComponent(props) {
       <h2>Welcome to Gator News!!</h2>
       <Button
           variant="primary"
-          onClick={() => openModal(<h2>Register</h2>)}
+          onClick={() => openModal(<SignUpForm setShowModal={setShowModal}></SignUpForm>)}
         >Register</Button>
       <Button variant="primary">Log In</Button>
       </div>
