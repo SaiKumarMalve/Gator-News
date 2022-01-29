@@ -1,34 +1,34 @@
-import React from "react";
+import React, { useState} from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faSearch,faUsers,faComment} from "@fortawesome/free-solid-svg-icons";
 import "./SignInSingUp.scss";
-import UFLogo from "../../assets/png/main-logo.png";
-import Lottie from 'lottie-react-web'
-import animation from "../../assets/png/animation.json"
-
 import BasicModal from "../../components/Modal/BasicModal";
 import GatorLogo from "../../assets/png/logo-white.png";
 
-const App = () => (
-  <Lottie
-    options={{
-      animationData: animation
-      
-    }}
-  />
-)
+export default function SignInSingUp(props) {
+  const [showModal, setShowModal] = useState(false);
+  const [contentModal, setContentModal] = useState(null);
 
-export default function SignInSingUp() {
+  const openModal = content => {
+    setShowModal(true);
+    setContentModal(content);
+  };
+
   return (
     <div>
       <Container className="signin-signup" fluid>
         <Row>
           <LeftComponent />
-          <RightComponent />
+          <RightComponent
+            openModal={openModal}
+            setShowModal={setShowModal}
+          />
         </Row>
       </Container>
-      <BasicModal/>
+      <BasicModal show={showModal} setShow={setShowModal}>
+        {contentModal}
+      </BasicModal>
       </div>
 
   );
@@ -55,7 +55,8 @@ function LeftComponent() {
   );
 }
 
-function RightComponent() {
+function RightComponent(props) {
+  const { openModal} = props;
   return (
     <Col className="signin-signup__right" xs="6">
       <div class="rightPane">
@@ -65,7 +66,10 @@ function RightComponent() {
       <div class="content">
       
       <h2>Welcome to Gator News!!</h2>
-      <Button variant="primary">Register Gator</Button>
+      <Button
+          variant="primary"
+          onClick={() => openModal(<h2>Register</h2>)}
+        >Register</Button>
       <Button variant="primary">Log In</Button>
       </div>
       </div>
