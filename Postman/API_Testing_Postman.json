@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "5bf031b0-3099-4f3f-a5c2-bf23de3fbdb4",
+		"name": "Gator-News",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"111111111111111111111111\" ,\n    \"email\": \"alekhya64@gmail.com\",\n    \"password\": \"1234rtjgio56\",\n    \"name\": \"Alex\",\n    \"lastName\": \"Gnekj\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Root}}/registration",
+					"host": [
+						"{{Root}}"
+					],
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
