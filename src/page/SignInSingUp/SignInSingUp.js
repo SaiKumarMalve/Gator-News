@@ -6,6 +6,8 @@ import "./SignInSingUp.scss";
 import BasicModal from "../../components/Modal/BasicModal";
 import GatorLogo from "../../assets/png/logo-white.png";
 import SignUpForm from "../../components/SignUpForm"
+import SignInForm from "../../components/SignInForm";
+
 export default function SignInSingUp(props) {
   const [showModal, setShowModal] = useState(false);
   const [contentModal, setContentModal] = useState(null);
@@ -70,7 +72,10 @@ function RightComponent(props) {
           variant="primary"
           onClick={() => openModal(<SignUpForm setShowModal={setShowModal}></SignUpForm>)}
         >Register</Button>
-      <Button variant="primary">Log In</Button>
+        <Button
+          variant="primary"
+          onClick={() => openModal(<SignInForm/>)}
+        >Login</Button>
       </div>
       </div>
     </Col>
