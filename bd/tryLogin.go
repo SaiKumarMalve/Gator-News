@@ -5,6 +5,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+/*TryLogin checks if the user exists in the database . If found it will compare the given password and password found in database.*/
 func TryLogin(email string, password string) (models.User, bool) {
 	use, found, _ := CheckUserAlreadyExists(email)
 	if found == false {
