@@ -14,7 +14,6 @@ func CheckUserAlreadyExists(email string) (models.User, bool, string) {
 
 	db := MongoCN.Database(("gatorNews"))
 	col := db.Collection("users")
-	println(col.CountDocuments(ctx, bson.M{}))
 	condition := bson.M{"email": email}
 	var result models.User
 	err := col.FindOne(ctx, condition).Decode(&result)
