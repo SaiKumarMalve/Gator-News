@@ -16,7 +16,6 @@ export default function SignInForm() {
 
     return (
         <div className="sign-in-form">
-          <h2>Gator Details</h2>
           <Form onSubmit={onSubmit} onChange={onChange}>
             <Form.Group>
               <Form.Control
@@ -45,7 +44,7 @@ export default function SignInForm() {
 
   function initialFormValue() {
       return{
-          email: "ktejaswini@gmail.com",
-          password: "123"
+          email: "",
+          password: ""
       };
   }
