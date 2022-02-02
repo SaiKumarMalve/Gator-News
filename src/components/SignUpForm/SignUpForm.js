@@ -1,13 +1,17 @@
-import {React, useState} from 'react';
-import {Row,Col,Form,Button,Spinner} from "react-bootstrap"
-import {values,size} from "lodash";
+import React, { useState } from "react";
+import { Row, Col, Form, Button, Spinner } from "react-bootstrap";
+import { values, size } from "lodash";
 import { toast } from "react-toastify";
 import { isEmailValid } from "../../utils/validations";
+import { signUpApi } from "../../api/auth";
+
 import "./SignUpForm.scss";
+
 export default function SignUpForm(props) {
   const { setShowModal } = props;
   const [formData, setFormData] = useState(initialFormValue());
   const [signUpLoading, setSignUpLoading] = useState(false);
+
   const onSubmit = e => {
     e.preventDefault();
 
@@ -17,23 +21,37 @@ export default function SignUpForm(props) {
       return null;
     });
 
-    if (validCount !== 5) {
-      toast.warning("Complete all the fields of the form");
-    } 
-    else {
+    if (validCount !== size(formData)) {
+      toast.warning("Complete All form details");
+    } else {
       if (!isEmailValid(formData.email)) {
-        toast.warning("Invalid Email");
+        toast.warning("Email invalid");
       } else if (formData.password !== formData.confirmPassword) {
-        toast.warning("Password must be same");
+        toast.warning("Password did not match");
       } else if (size(formData.password) < 6) {
-        toast.warning("Password must be 6 characters");
-      }
-      else{
+        toast.warning("Password characters less than 6");
+      } else {
         setSignUpLoading(true);
-        toast.success("Form Completed Successfully")
+        signUpApi(formData)
+          .then(response => {
+            if (response.code) {
+              toast.warning(response.message);
+            } else {
+              toast.success("Successful Created");
+              setShowModal(false);
+              setFormData(initialFormValue());
+            }
+          })
+          .catch(() => {
+            toast.error("Server error, please try again later!");
+          })
+          .finally(() => {
+            setSignUpLoading(false);
+          });
       }
-  }
+    }
   };
+
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -54,9 +72,9 @@ export default function SignUpForm(props) {
             <Col>
               <Form.Control
                 type="text"
-                placeholder="First Name"
-                name="firstName"
-                defaultValue={formData.firstName}
+                placeholder="Last Name"
+                name="lastname"
+                defaultValue={formData.lastname}
               />
             </Col>
           </Row>
@@ -64,7 +82,7 @@ export default function SignUpForm(props) {
         <Form.Group>
           <Form.Control
             type="email"
-            placeholder="Email ID"
+            placeholder="Email Address"
             name="email"
             defaultValue={formData.email}
           />
@@ -91,7 +109,7 @@ export default function SignUpForm(props) {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          {!signUpLoading ? "Registrase" : <Spinner animation="border" />}
+          {!signUpLoading ? "Register" : <Spinner animation="border" />}
         </Button>
       </Form>
     </div>
@@ -100,8 +118,8 @@ export default function SignUpForm(props) {
 
 function initialFormValue() {
   return {
-    firstName: "",
-    lastName: "",
+    name: "",
+    lastname: "",
     email: "",
     password: "",
     confirmPassword: ""
