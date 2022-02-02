@@ -33,6 +33,7 @@ export default function SignInForm() {
                     if (response.message) {
                       toast.warning(response.message);
                     } else {
+                      setTokenApi(response.Token);
                       console.log(response.Token);
                     }
                   })
