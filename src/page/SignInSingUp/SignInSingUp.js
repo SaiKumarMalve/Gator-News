@@ -9,6 +9,7 @@ import SignUpForm from "../../components/SignUpForm"
 import SignInForm from "../../components/SignInForm";
 
 export default function SignInSingUp(props) {
+  const {setRefreshCheckLogin}=props;
   const [showModal, setShowModal] = useState(false);
   const [contentModal, setContentModal] = useState(null);
 
@@ -25,6 +26,7 @@ export default function SignInSingUp(props) {
           <RightComponent
             openModal={openModal}
             setShowModal={setShowModal}
+            setRefreshCheckLogin={setRefreshCheckLogin}
           />
         </Row>
       </Container>
@@ -58,7 +60,7 @@ function LeftComponent() {
 }
 
 function RightComponent(props) {
-  const { openModal, setShowModal} = props;
+  const { openModal, setShowModal, setRefreshCheckLogin} = props;
   return (
     <Col className="signin-signup__right" xs="6">
       <div class="rightPane">
@@ -74,7 +76,7 @@ function RightComponent(props) {
         >Register</Button>
         <Button
           variant="primary"
-          onClick={() => openModal(<SignInForm/>)}
+          onClick={() => openModal(<SignInForm setRefreshCheckLogin={setRefreshCheckLogin}/>)}
         >Login</Button>
       </div>
       </div>
