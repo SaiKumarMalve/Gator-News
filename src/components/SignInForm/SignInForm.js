@@ -6,7 +6,9 @@ import {toast} from "react-toastify";
 import {isEmailValid} from "../../utils/validations";
 import { signInApi, setTokenApi } from "../../api/auth";
 
-export default function SignInForm() {
+export default function SignInForm(props) {
+    console.log(props);
+    const { setRefreshCheckLogin } = props;
     const[formData,setFormData]=useState(initialFormValue());
     const [signInLoading, setSignInLoading] = useState(false);
     
@@ -34,6 +36,7 @@ export default function SignInForm() {
                       toast.warning(response.message);
                     } else {
                       setTokenApi(response.Token);
+                      setRefreshCheckLogin(true);
                       console.log(response.Token);
                     }
                   })
