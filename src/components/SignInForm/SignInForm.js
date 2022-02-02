@@ -4,6 +4,7 @@ import "./SignInForm.scss";
 import {values,size} from "lodash";
 import {toast} from "react-toastify";
 import {isEmailValid} from "../../utils/validations";
+import { signInApi, setTokenApi } from "../../api/auth";
 
 export default function SignInForm() {
     const[formData,setFormData]=useState(initialFormValue());
@@ -27,7 +28,21 @@ export default function SignInForm() {
                 toast.warning("Invalid Email Entered");
             } else{
                 setSignInLoading(true);
-                toast.success("Gator Login Successful");
+                signInApi(formData)
+                  .then(response => {
+                    if (response.message) {
+                      toast.warning(response.message);
+                    } else {
+                      console.log(response.Token);
+                    }
+                  })
+                  .catch(() => {
+                    toast.error("Server error, please try again later");
+                  })
+                  .finally(() => {
+                    setSignInLoading(false);
+                  });
+                //toast.success("Gator Login Successful");
             }
         }
 
