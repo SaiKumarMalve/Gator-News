@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\":\"111111111111111111111111\" ,\n    \"email\": \"alekhya64@gmail.com\",\n    \"password\": \"1234rtjgio56\",\n    \"name\": \"Alex\",\n    \"lastName\": \"Gnekj\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
+					"raw": "{\n    \"_id\":\"111111111111111111111112\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Sai Kumar\",\n    \"lastName\": \"Malve\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,16 +20,172 @@
 					}
 				},
 				"url": {
-					"raw": "{{Root}}/registration",
+					"raw": "https://gatornews.herokuapp.com/registration",
+					"protocol": "https",
 					"host": [
-						"{{Root}}"
+						"gatornews",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"registration"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"111111111111111111111112\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Sai Kumar\",\n    \"lastName\": \"Malve\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/registration",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Feb 2022 20:50:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Feb 2022 20:50:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "366"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIxOTk5LTA4LTA5VDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQzOTIxNDIyLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.jPdDo_ce7P5hru_62HP4VzuHb0Z3dfmWr_1VLBQXKkY\"\n}"
+				}
+			]
 		}
 	]
 }
