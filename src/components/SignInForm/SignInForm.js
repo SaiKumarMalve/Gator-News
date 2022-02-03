@@ -7,6 +7,7 @@ import {isEmailValid} from "../../utils/validations";
 import { signInApi, setTokenApi } from "../../api/auth";
 
 export default function SignInForm(props) {
+  console.log("invoked");
     console.log(props);
     const { setRefreshCheckLogin } = props;
     const[formData,setFormData]=useState(initialFormValue());
