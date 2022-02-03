@@ -2,7 +2,9 @@
 
 .basic-layout {
   &__menu {
+    float: left;
     padding-right: 0 !important;
+
   }
 
   &__content {
