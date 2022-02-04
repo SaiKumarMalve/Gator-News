@@ -35,7 +35,7 @@ export default function InfoUser(props) {
           <p>
            <DateBirth />
             {moment(user.BirthDate)
-              .locale("in", localization)
+              .locale("en", localization)
               .format("LL")}
           </p>
         )}
