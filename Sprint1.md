@@ -1,7 +1,7 @@
 # Sprint I
 
-#Project Accomplishments:
-#Backend:
+# Project Accomplishments:
+# Backend:
 1) Created a database on MongoDB and established the connection in the backend
 2) Hosted the backend APIs on https://gatornews.herokuapp.com/
 3) Created user model that contains the user information
@@ -11,4 +11,4 @@
 7) A user's profile can be modified with a call to Modify Profile API with JWT and user updated profile as a JSON object in the HTTP body
 8) The logged in user can post a message (news or gossip). Post API can be used to post a message with a Authorized JWT and HTTP body with "message" property.
 
-#Frontend:
+# Frontend:
