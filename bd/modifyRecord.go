@@ -9,6 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+/* modifies the record of the user*/
 func ModifyRecord(u models.User, ID string) (bool, error) {
 	ctx, cancel := context.WithTimeout((context.Background()), 15*time.Second)
 	defer cancel()
