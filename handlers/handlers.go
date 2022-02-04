@@ -18,8 +18,10 @@ func Handlers() {
 	router.HandleFunc("/registration", middlew.CheckBD(routers.Registration)).Methods("POST")
 	router.HandleFunc("/login", middlew.CheckBD(routers.Login)).Methods("POST")
 	router.HandleFunc("/viewProfile", middlew.CheckBD(middlew.ValidJWT(routers.ViewProfile))).Methods("GET")
-	// router.HandleFunc("/modifyProfile", middlew.CheckBD(middlew.ValidJWT(routers.ModifyProfile))).Methods("PUT")
-	PORT := os.Getenv("PORT")
+	router.HandleFunc("/modifyProfile", middlew.CheckBD(middlew.ValidJWT(routers.ModifyProfile))).Methods("PUT")
+	/*router.HandleFunc("/post", middlew.CheckBD(middlew.ValidJWT(routers.RecordPost))).Methods("POST")*/
+
+  PORT := os.Getenv("PORT")
 	if PORT == "" {
 		PORT = "8080"
 	}
