@@ -1,29 +1,80 @@
-import React from 'react';
-import {Row,Col,Form,Button,Spinner} from "react-bootstrap"
+import React, { useState } from "react";
+import { Row, Col, Form, Button, Spinner } from "react-bootstrap";
+import { values, size } from "lodash";
+import { toast } from "react-toastify";
+import { isEmailValid } from "../../utils/validations";
+import { signUpApi } from "../../api/auth";
+
 import "./SignUpForm.scss";
+
 export default function SignUpForm(props) {
-  const{ setShowModal}=props;
-  const onSubmit=e=>{
+  const { setShowModal } = props;
+  const [formData, setFormData] = useState(initialFormValue());
+  const [signUpLoading, setSignUpLoading] = useState(false);
+
+  const onSubmit = e => {
     e.preventDefault();
-    setShowModal(false);
+
+    let validCount = 0;
+    values(formData).some(value => {
+      value && validCount++;
+      return null;
+    });
+
+    if (validCount !== size(formData)) {
+      toast.warning("Complete All form details");
+    } else {
+      if (!isEmailValid(formData.email)) {
+        toast.warning("Email invalid");
+      } else if (formData.password !== formData.confirmPassword) {
+        toast.warning("Password did not match");
+      } else if (size(formData.password) < 6) {
+        toast.warning("Password characters less than 6");
+      } else {
+        setSignUpLoading(true);
+        signUpApi(formData)
+          .then(response => {
+            if (response.code) {
+              toast.warning(response.message);
+            } else {
+              toast.success("Successful Created");
+              setShowModal(false);
+              setFormData(initialFormValue());
+            }
+          })
+          .catch(() => {
+            toast.error("Server error, please try again later!");
+          })
+          .finally(() => {
+            setSignUpLoading(false);
+          });
+      }
+    }
   };
 
+  const onChange = e => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  return (<div className='sign-up-form'>
-    <h2>SignUpForm</h2>
-    <Form onSubmit={onSubmit}>
-    <Form.Group>
+  return (
+    <div className="sign-up-form">
+      <Form onSubmit={onSubmit} onChange={onChange}>
+        <Form.Group>
           <Row>
             <Col>
               <Form.Control
                 type="text"
-                placeholder="First Name"
+                placeholder="Name"
+                name="name"
+                defaultValue={formData.name}
               />
             </Col>
             <Col>
               <Form.Control
                 type="text"
                 placeholder="Last Name"
+                name="lastname"
+                defaultValue={formData.lastname}
               />
             </Col>
           </Row>
@@ -31,7 +82,9 @@ export default function SignUpForm(props) {
         <Form.Group>
           <Form.Control
             type="email"
-            placeholder="Email Id"
+            placeholder="Email Address"
+            name="email"
+            defaultValue={formData.email}
           />
         </Form.Group>
         <Form.Group>
@@ -40,20 +93,35 @@ export default function SignUpForm(props) {
               <Form.Control
                 type="password"
                 placeholder="Password"
+                name="password"
+                defaultValue={formData.password}
               />
             </Col>
             <Col>
               <Form.Control
                 type="password"
                 placeholder="Confirm Password"
+                name="confirmPassword"
+                defaultValue={formData.confirmPassword}
               />
             </Col>
           </Row>
         </Form.Group>
+
         <Button variant="primary" type="submit">
-           Register
+          {!signUpLoading ? "Register" : <Spinner animation="border" />}
         </Button>
-        </Form>
-        </div>
+      </Form>
+    </div>
   );
+}
+
+function initialFormValue() {
+  return {
+    name: "",
+    lastname: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  };
 }

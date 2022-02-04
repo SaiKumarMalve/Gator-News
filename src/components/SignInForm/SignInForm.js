@@ -1,12 +1,56 @@
 import React, {useState} from 'react';
-import {Form,Button} from "react-bootstrap"
+import {Form,Button, Spinner} from "react-bootstrap"
 import "./SignInForm.scss";
+import {values,size} from "lodash";
+import {toast} from "react-toastify";
+import {isEmailValid} from "../../utils/validations";
+import { signInApi, setTokenApi } from "../../api/auth";
 
-export default function SignInForm() {
+export default function SignInForm(props) {
+    console.log(props);
+    const { setRefreshCheckLogin } = props;
     const[formData,setFormData]=useState(initialFormValue());
+    const [signInLoading, setSignInLoading] = useState(false);
+    
     const onSubmit=e=>{
         e.preventDefault();
         console.log(formData);
+
+        let validationCount=0;
+        values(formData).some(value => {
+            value && validationCount++
+            return null;
+        });
+
+        //validate the input size entered by matching args
+        if(size(formData) !== validationCount){
+            toast.warning("Enter all details in the mentioned fields ");
+        } else{
+            if(!isEmailValid(formData.email)){
+                toast.warning("Invalid Email Entered");
+            } else{
+                setSignInLoading(true);
+                signInApi(formData)
+                  .then(response => {
+                    if (response.message) {
+                      toast.warning(response.message);
+                    } else {
+                      setTokenApi(response.Token);
+                      setRefreshCheckLogin(true);
+                      console.log(response.Token);
+                    }
+                  })
+                  .catch(() => {
+                    toast.error("Server error, please try again later");
+                  })
+                  .finally(() => {
+                    setSignInLoading(false);
+                  });
+                //toast.success("Gator Login Successful");
+            }
+        }
+
+        console.log(validationCount);
     };
 
 
@@ -34,7 +78,7 @@ export default function SignInForm() {
                 
               />
             </Form.Group>
-            <Button variant="primary" type="submit">Login to Gator News </Button>
+            <Button variant="primary" type="submit"> {!signInLoading ? "Login to Gator News" : <Spinner animation="border" />} </Button>
           </Form>
         </div>
       );
