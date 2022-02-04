@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"_id\":\"111111111111111111111112\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Sai Kumar\",\n    \"lastName\": \"Malve\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
+					"raw": "{\n    \"name\": \"Sai Kumar\",\n    \"lastname\": \"Malve\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":\"111111111111111111111112\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Sai Kumar\",\n    \"lastName\": \"Malve\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\"\n}",
+							"raw": "{\n    \"name\": \"Sai Kumar\",\n    \"lastname\": \"Malve\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -78,7 +78,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 02 Feb 2022 20:50:10 GMT"
+							"value": "Fri, 04 Feb 2022 20:36:08 GMT"
 						},
 						{
 							"key": "Content-Length",
@@ -171,7 +171,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 02 Feb 2022 20:50:22 GMT"
+							"value": "Fri, 04 Feb 2022 20:36:33 GMT"
 						},
 						{
 							"key": "Content-Length",
@@ -183,7 +183,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIxOTk5LTA4LTA5VDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQzOTIxNDIyLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.jPdDo_ce7P5hru_62HP4VzuHb0Z3dfmWr_1VLBQXKkY\"\n}"
+					"body": "{\n    \"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkOGUzOGRkNWE1MDc5OWFjMWU0NWIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIwMDAxLTAxLTAxVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQ0MDkzMzkzLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.tLDzq0fZsOv3Z7CawUz8pCD0X4MCsiLtQDNhCADl5nA\"\n}"
 				}
 			]
 		},
@@ -198,7 +198,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIxOTk5LTA4LTA5VDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQzOTIxNDIyLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.jPdDo_ce7P5hru_62HP4VzuHb0Z3dfmWr_1VLBQXKkY",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkOGUzOGRkNWE1MDc5OWFjMWU0NWIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIwMDAxLTAxLTAxVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQ0MDkzMzkzLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.tLDzq0fZsOv3Z7CawUz8pCD0X4MCsiLtQDNhCADl5nA",
 							"type": "string"
 						}
 					]
@@ -222,7 +222,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://gatornews.herokuapp.com/viewProfile?id=111111111111111111111112",
+					"raw": "https://gatornews.herokuapp.com/viewProfile?id=61fd8e38dd5a50799ac1e45b",
 					"protocol": "https",
 					"host": [
 						"gatornews",
@@ -235,7 +235,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "111111111111111111111112"
+							"value": "61fd8e38dd5a50799ac1e45b"
 						}
 					]
 				}
@@ -263,7 +263,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://gatornews.herokuapp.com/viewProfile?id=111111111111111111111112",
+							"raw": "https://gatornews.herokuapp.com/viewProfile?id=61fd8e38dd5a50799ac1e45b",
 							"protocol": "https",
 							"host": [
 								"gatornews",
@@ -276,7 +276,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "111111111111111111111112"
+									"value": "61fd8e38dd5a50799ac1e45b"
 								}
 							]
 						}
@@ -303,7 +303,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Thu, 03 Feb 2022 23:42:43 GMT"
+							"value": "Fri, 04 Feb 2022 20:37:40 GMT"
 						},
 						{
 							"key": "Content-Length",
@@ -319,7 +319,229 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\"id\":\"111111111111111111111112\",\"name\":\"Sai Kumar\",\"lastname\":\"Malve\",\"BirthDate\":\"1999-08-09T00:00:00Z\",\"email\":\"sai.kumar.malve95@gmail.com\"}\n"
+					"body": "{\"id\":\"61fd8e38dd5a50799ac1e45b\",\"name\":\"Sai Kumar\",\"lastname\":\"Malve\",\"BirthDate\":\"0001-01-01T00:00:00Z\",\"email\":\"sai.kumar.malve95@gmail.com\"}\n"
+				}
+			]
+		},
+		{
+			"name": "modifyProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkOGUzOGRkNWE1MDc5OWFjMWU0NWIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIwMDAxLTAxLTAxVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQ0MDkzMzkzLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.tLDzq0fZsOv3Z7CawUz8pCD0X4MCsiLtQDNhCADl5nA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Sai Kumar\" ,\n    \"lastname\": \"Malve\",\n    \"birthDate\": \"1995-02-23T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am MS CS student\",\n    \"website\": \"https://github.com/SaiKumarMalve/Gator-News\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/modifyProfile",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"modifyProfile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "modifyProfile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Sai Kumar\" ,\n    \"lastname\": \"Malve\",\n    \"birthDate\": \"1995-02-23T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am MS CS student\",\n    \"website\": \"https://github.com/SaiKumarMalve/Gator-News\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/modifyProfile",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modifyProfile"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Feb 2022 20:37:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkOGUzOGRkNWE1MDc5OWFjMWU0NWIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIwMDAxLTAxLTAxVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQ0MDkzMzkzLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.tLDzq0fZsOv3Z7CawUz8pCD0X4MCsiLtQDNhCADl5nA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"Happy World Nutella Day!😊😊😊\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/post",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\":\"Happy World Nutella Day!😊😊😊\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/post",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Feb 2022 20:38:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
 				}
 			]
 		},
