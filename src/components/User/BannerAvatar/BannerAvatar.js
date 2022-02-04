@@ -1,7 +1,7 @@
 import React from "react";
 import { API_HOST } from "../../../utils/constant";
 import banner from "../../../assets/png/logo.png";
-import avatar from "../../../assets/png/logo-white.png";
+import avatar from "../../../assets/png/user.png";
 import "./BannerAvatar.scss";
 import { Button } from "react-bootstrap";
 export default function Routing(props) {
@@ -16,9 +16,9 @@ export default function Routing(props) {
 
   return (
       <div className="banner-avatar">
-        <img src={banner} alt="Twittor" />
+        <img src={banner} alt="Gator" />
         <div className="avatar">
-          <img  src={avatar} alt="Twittor" />
+          <img  src={avatar} alt="Twittor"/>
         </div>
         {user && (
         <div className="options">

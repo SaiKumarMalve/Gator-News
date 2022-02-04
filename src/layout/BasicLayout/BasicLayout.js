@@ -9,10 +9,10 @@ export default function BasicLayout(props) {
 
     return(
             <Row>
-                <Col lg={3} className="basic-layout__menu">
+                <Col lg={2} className="basic-layout__menu">
                     <LeftMenu setRefreshCheckLogin={setRefreshCheckLogin}></LeftMenu>
                 </Col>
-                <Col lg={9} className="basic-layout__content">
+                <Col lg={10} className="basic-layout__content">
                     {children}
                 </Col>
                 <col>

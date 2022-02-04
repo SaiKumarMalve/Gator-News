@@ -33,14 +33,8 @@ import "./User.scss";
 
     return(
         <BasicLayout className="user">
-            <div className="user__title">
-                <h2>
-                    {user ? `${user.name} ${user.lastname}` : "The user you visited does not exist"}
-                </h2>
-                </div>   
             <BannerAvatar user={user} loggedUser={loggedUser} />  
-            <InfoUser user={user}></InfoUser>
-            <div className="user__tweets">Tweet List</div>      
+            <InfoUser user={user}></InfoUser>     
         </BasicLayout>
     )
 }
