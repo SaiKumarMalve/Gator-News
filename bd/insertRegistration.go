@@ -12,6 +12,9 @@ import (
 func InsertRegistration(u models.User) (string, bool, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
+	
+	u.ID = primitive.NewObjectID()
+	
 	db := MongoCN.Database("gatorNews")
 	col := db.Collection("users")
 
