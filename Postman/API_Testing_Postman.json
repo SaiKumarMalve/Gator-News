@@ -322,6 +322,125 @@
 					"body": "{\"id\":\"111111111111111111111112\",\"name\":\"Sai Kumar\",\"lastname\":\"Malve\",\"BirthDate\":\"1999-08-09T00:00:00Z\",\"email\":\"sai.kumar.malve95@gmail.com\"}\n"
 				}
 			]
+		},
+		{
+			"name": "modifyProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiJJIGFtIGEgc3R1ZGVudCIsImJpcnRoZGF0ZSI6IjE5OTktMDgtMDlUMDA6MDA6MDBaIiwiZW1haWwiOiJzYWkua3VtYXIubWFsdmU5NUBnbWFpbC5jb20iLCJleHAiOjE2NDM4NDM1NTUsImxhc3RuYW1lIjoiR29sbGFtdWRpIiwibG9jYXRpb24iOiJHYWluZXN2aWxsZSIsIm5hbWUiOiJBbGVraHlhIiwid2Vic2l0ZSI6Imh0dHBzOi8vbGVldGNvZGUuY29tL3Byb2JsZW1zL2NsaW1iaW5nLXN0YWlycy9zb2x1dGlvbi8ifQ.wdsEHnNr99F88Bqufe4iCI5hkKWB8_nr3DRxeqdqxq8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{tokens}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Alekhya\" ,\n    \"lastname\": \"Gollamudi\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am a student\",\n    \"website\": \"https://leetcode.com/problems/climbing-stairs/solution/\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Root}}/modifyProfile",
+					"host": [
+						"{{Root}}"
+					],
+					"path": [
+						"modifyProfile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "modifyProfile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Alekhya\" ,\n    \"lastname\": \"Gollamudi\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am a student\",\n    \"website\": \"https://leetcode.com/problems/climbing-stairs/solution/\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/modifyProfile",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"modifyProfile"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Feb 2022 03:10:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	]
 }
