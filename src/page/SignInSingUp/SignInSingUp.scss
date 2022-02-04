@@ -51,10 +51,14 @@
     }
     .LogoImage{
       img{
-        margin-top: 100px;
         margin-left: 150px;
-        width:200px;
-        margin-bottom: 20px;
+        width: 200px;
+        padding-top: 200px;
+        
+        // margin-top: 100px;
+        // margin-left: 150px;
+        // width:200px;
+        // margin-bottom: 20px;
       }
     }
     .content {
@@ -80,6 +84,7 @@
         padding: 10px 0;
         margin-bottom: 20px;
         margin-top: 5px;
+        background-color: $primary;
       }
       
       &:first-of-type{
