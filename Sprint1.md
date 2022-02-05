@@ -1,5 +1,10 @@
 # Sprint I
 
+Frontend Demo: https://youtu.be/Gzo_MphEFjE
+
+Backend Demo: https://youtu.be/aLl1goWGH6w
+
+
 # Project Accomplishments:
 # Backend:
 1. Created a database on MongoDB and established the connection in the backend
