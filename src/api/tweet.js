@@ -29,7 +29,7 @@ export function addTweetApi(message) {
 }
 
 export function getUserTweetsApi(idUser, page) {
-  const url = `${API_HOST}/getTweets?id=${idUser}&pagina=${page}`;
+  const url = `${API_HOST}/readPosts?id=${idUser}&page=1`;
 
   const params = {
     headers: {
@@ -48,7 +48,7 @@ export function getUserTweetsApi(idUser, page) {
 }
 
 export function getTweetsFollowersApi(page = 1) {
-  const url = `${API_HOST}/leoTweetsSeguidores?pagina=${page}`;
+  const url = `${API_HOST}/getTweetsFollowers?pagina=${page}`;
 
   const params = {
     headers: {
