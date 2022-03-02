@@ -11,7 +11,7 @@ export default function Routing(props) {
   const bannerUrl = user?.banner
     ? `${API_HOST}/obtenerBanner?id=${user.id}`
     : null;
-    const avatarUrl=user?.avatar?`${API_HOST}/obtenerBanner?id=${user.id}`:avatar;
+    const avatarUrl=user?.avatar?`${API_HOST}/getBanner?id=${user.id}`:avatar;
     console.log(loggedUser);
 
   return (
