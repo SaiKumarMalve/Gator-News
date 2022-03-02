@@ -6,20 +6,17 @@ import (
 
 	"github.com/SaiKumarMalve/Gator-News/models"
 	jwt "github.com/dgrijalva/jwt-go"
+	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 //AnswerLogin model Unit test case
 func TestAnswerLogin(t *testing.T) {
 	loginSucess := models.AnswerLogin{"SUCCESS"}
-	if loginSucess.Token != "SUCCESS" {
-		t.Errorf("Object not initialzed with the code: %s.", loginSucess.Token)
-	}
+	assert.Equal(t, loginSucess.Token, "SUCCESS", "Object not initialzed with the code: %s.", loginSucess.Token)
 
 	loginFailure := models.AnswerLogin{}
-	if loginFailure.Token != "" {
-		t.Errorf("Object not initialzed")
-	}
+	assert.Equal(t, loginFailure.Token, "", "Object not initialzed")
 }
 
 //Claim model Unit test case
@@ -47,9 +44,7 @@ func TestClaim(t *testing.T) {
 //Post model Unit test case
 func TestPost(t *testing.T) {
 	postMessage := models.Post{"Message has been posted!"}
-	if postMessage.Message == "" {
-		t.Errorf("Post Structure has not been initialzed with the message")
-	}
+	assert.Equal(t, postMessage.Message, "Message has been posted!", "Post Structure has not been initialzed with the message")
 }
 
 //RecordPost model Unit test case
@@ -59,9 +54,7 @@ func TestRecordPost(t *testing.T) {
 		t.Errorf("Date not set to current date: %v.", RecordPost.Date)
 	}
 
-	if RecordPost.UserID == "" {
-		t.Errorf("userID is invalid or empty")
-	}
+	assert.Equal(t, RecordPost.UserID, "FAFAFAFAFAFA", "userID is invalid or empty")
 }
 
 //User model Unit test case
@@ -71,7 +64,5 @@ func TestUser(t *testing.T) {
 		t.Errorf("ID is must for a user Structure %s", User)
 	}
 
-	if User.Email == "" {
-		t.Errorf("User email is must for any user %s", User)
-	}
+	assert.Equal(t, User.Email, "testuser@se.com", "User email is must for any user %s", User)
 }
