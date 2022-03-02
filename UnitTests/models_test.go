@@ -1,21 +1,22 @@
-package models
+package UnitTests
 
 import (
 	"testing"
 	"time"
 
+	"github.com/SaiKumarMalve/Gator-News/models"
 	jwt "github.com/dgrijalva/jwt-go"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 //AnswerLogin model Unit test case
 func TestAnswerLogin(t *testing.T) {
-	loginSucess := AnswerLogin{"SUCCESS"}
+	loginSucess := models.AnswerLogin{"SUCCESS"}
 	if loginSucess.Token != "SUCCESS" {
 		t.Errorf("Object not initialzed with the code: %s.", loginSucess.Token)
 	}
 
-	loginFailure := AnswerLogin{}
+	loginFailure := models.AnswerLogin{}
 	if loginFailure.Token != "" {
 		t.Errorf("Object not initialzed")
 	}
@@ -32,7 +33,7 @@ func TestClaim(t *testing.T) {
 		NotBefore: 2000,
 		Subject:   "Testing",
 	}
-	claimJSON := Claim{"", primitive.NewObjectID(), *claims}
+	claimJSON := models.Claim{"", primitive.NewObjectID(), *claims}
 	if claimJSON.VerifyIssuedAt(1000, true) {
 		t.Errorf("Verification of IssuedAt failed. IssuedAt: %d.", claimJSON.IssuedAt)
 	}
@@ -45,7 +46,7 @@ func TestClaim(t *testing.T) {
 
 //Post model Unit test case
 func TestPost(t *testing.T) {
-	postMessage := Post{"Message has been posted!"}
+	postMessage := models.Post{"Message has been posted!"}
 	if postMessage.Message == "" {
 		t.Errorf("Post Structure has not been initialzed with the message")
 	}
@@ -53,7 +54,7 @@ func TestPost(t *testing.T) {
 
 //RecordPost model Unit test case
 func TestRecordPost(t *testing.T) {
-	RecordPost := RecordPost{"FAFAFAFAFAFA", "User Message", time.Now()}
+	RecordPost := models.RecordPost{"FAFAFAFAFAFA", "User Message", time.Now()}
 	if RecordPost.Date.IsZero() {
 		t.Errorf("Date not set to current date: %v.", RecordPost.Date)
 	}
@@ -65,7 +66,7 @@ func TestRecordPost(t *testing.T) {
 
 //User model Unit test case
 func TestUser(t *testing.T) {
-	User := User{primitive.NewObjectID(), "Test", "User", time.Now(), "testuser@se.com", "123456", "", "", "", "", ""}
+	User := models.User{primitive.NewObjectID(), "Test", "User", time.Now(), "testuser@se.com", "123456", "", "", "", "", ""}
 	if User.ID.Hex() == "" {
 		t.Errorf("ID is must for a user Structure %s", User)
 	}
