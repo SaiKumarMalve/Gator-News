@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+//AnswerLogin model Unit test case
 func TestAnswerLogin(t *testing.T) {
 	loginSucess := AnswerLogin{"SUCCESS"}
 	if loginSucess.Token != "SUCCESS" {
@@ -20,6 +21,7 @@ func TestAnswerLogin(t *testing.T) {
 	}
 }
 
+//Claim model Unit test case
 func TestClaim(t *testing.T) {
 	claims := &jwt.StandardClaims{
 		Audience:  "SE",
@@ -41,6 +43,7 @@ func TestClaim(t *testing.T) {
 
 }
 
+//Post model Unit test case
 func TestPost(t *testing.T) {
 	postMessage := Post{"Message has been posted!"}
 	if postMessage.Message == "" {
@@ -48,6 +51,7 @@ func TestPost(t *testing.T) {
 	}
 }
 
+//RecordPost model Unit test case
 func TestRecordPost(t *testing.T) {
 	RecordPost := RecordPost{"FAFAFAFAFAFA", "User Message", time.Now()}
 	if RecordPost.Date.IsZero() {
@@ -59,6 +63,7 @@ func TestRecordPost(t *testing.T) {
 	}
 }
 
+//User model Unit test case
 func TestUser(t *testing.T) {
 	User := User{primitive.NewObjectID(), "Test", "User", time.Now(), "testuser@se.com", "123456", "", "", "", "", ""}
 	if User.ID.Hex() == "" {
