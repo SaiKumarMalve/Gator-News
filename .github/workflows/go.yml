@@ -22,7 +22,7 @@ jobs:
       run: go build main.go
 
     - name: Test
-      run:|
+      run:  |
             go mod tidy
             go test -v ./UnitTests
             go tool cover -func coverage.out
