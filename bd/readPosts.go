@@ -18,6 +18,11 @@ func ReadPosts(ID string, page int64) ([]*models.ReturnPost, bool) {
 	col := db.Collection("news")
 
 	var result []*models.ReturnPost
+
+	if ID == "" {
+		log.Println("userid provided is empty!")
+		return result, false
+	}
 	condition := bson.M{
 		"userid": ID,
 	}
