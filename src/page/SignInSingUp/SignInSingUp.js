@@ -63,11 +63,11 @@ function RightComponent(props) {
   const { openModal, setShowModal, setRefreshCheckLogin} = props;
   return (
     <Col className="signin-signup__right" xs="6">
-      <div class="rightPane">
-      <div class="LogoImage">
+      <div className="rightPane">
+      <div className="LogoImage">
       <img src={GatorLogo} alt="GatorLogo"/>
       </div>
-      <div class="content">
+      <div className="content">
       
       <h2>Welcome to Gator News!!</h2>
       <Button
