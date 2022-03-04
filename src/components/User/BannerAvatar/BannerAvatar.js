@@ -16,16 +16,16 @@ export default function Routing(props) {
 
   return (
       <div className="banner-avatar">
-        <img src={banner} alt="Gator" />
+        <img data-testid="banner_avatar" src={banner} alt="Gator" />
         <div className="avatar">
-          <img  src={avatar} alt="Twittor"/>
+          <img  data-testid="user_avatar" src={avatar} alt="UserAvatar"/>
         </div>
         {user && (
         <div className="options">
           {loggedUser._id===user.id&&
             <Button>Edit Profile </Button>}
           {loggedUser._id!==user.id&&
-            <Button>seguir</Button>
+            <Button>Follow</Button>
           }
             </div>
           )}
