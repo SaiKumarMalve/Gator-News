@@ -78,7 +78,7 @@ export default function SignInForm(props) {
                 
               />
             </Form.Group>
-            <Button role="submit"  variant="primary" type="submit">  {!signInLoading ? "Login to Gator News" : <Spinner animation="border" />} </Button>
+            <Button role="submitForm"  variant="primary" type="submit">  {!signInLoading ? "Login to Gator News" : <Spinner animation="border" />} </Button>
           </Form>
         </div>
       );
