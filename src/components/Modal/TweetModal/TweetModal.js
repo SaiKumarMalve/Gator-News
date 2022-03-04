@@ -65,7 +65,7 @@ export default function TweetModal(props) {
           >
             {message.length}
           </span>
-          <Button
+          <Button role="submit"
             type="submit"
             disabled={message.length > maxLength || message.length < 1}
           >
