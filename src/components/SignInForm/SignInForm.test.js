@@ -28,7 +28,7 @@ describe ("login",()=>{
   test("user should be able to submit the form",()=>{
       const mockFunction=jest.fn()
       render(<SignInForm handleSubmit={mockFunction}/>)
-      const buttonNode=screen.getByRole("submit");
+      const buttonNode=screen.getByRole("submitForm");
       fireEvent.submit(buttonNode);
 
   })
