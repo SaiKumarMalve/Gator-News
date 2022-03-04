@@ -8,19 +8,21 @@ export default function BasicModal(props) {
   const { show, setShow, children } = props;
 
   return (
-    <Modal
+    <div data-testid="modal-header"> 
+    <Modal 
       className="basic-modal"
       show={show}
       onHide={() => setShow(false)}
       centered
       size="lg"
     >
-      <Modal.Header>
-        <Modal.Title>
-          <img src={Gator} alt="Twittor" />
+      <Modal.Header >
+        <Modal.Title >
+          <img title="image" data-testid="gator_logo" src={Gator} alt="Twittor" />
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{children}</Modal.Body>
+      <Modal.Body >{children}</Modal.Body>
     </Modal>
+    </div>
   );
 }
