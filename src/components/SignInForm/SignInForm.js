@@ -60,7 +60,9 @@ export default function SignInForm(props) {
         <div className="sign-in-form">
           <Form onSubmit={onSubmit} onChange={onChange}>
             <Form.Group>
+              <label htmlFor='emailID'>Email</label>
               <Form.Control
+              id='emailID'
                 type="email"
                 placeholder="Email Address"
                 defaultValue={formData.email}
@@ -76,7 +78,7 @@ export default function SignInForm(props) {
                 
               />
             </Form.Group>
-            <Button variant="primary" type="submit"> {!signInLoading ? "Login to Gator News" : <Spinner animation="border" />} </Button>
+            <Button role="submit"  variant="primary" type="submit">  {!signInLoading ? "Login to Gator News" : <Spinner animation="border" />} </Button>
           </Form>
         </div>
       );
