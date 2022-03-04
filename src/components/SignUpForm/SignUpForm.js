@@ -108,7 +108,7 @@ export default function SignUpForm(props) {
           </Row>
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button data-testid="modalButton" variant="primary" type="submit" role="submit" >
           {!signUpLoading ? "Register" : <Spinner animation="border" />}
         </Button>
       </Form>
