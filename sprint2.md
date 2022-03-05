@@ -164,3 +164,32 @@ Backend Demo: https://youtu.be/PWXH4vVxg20
  
 </details>
 
+
+
+# Fronend:
+- Created a Modal to display Tweets by User under their Profile Page 
+
+- Added Pagination Mechanism under Basic Modal Component to Structure Tweets made using Buzz along with specific details (I.e username, time, tweet content) 
+
+- Invoking the /readPosts API to fetch all the tweets send my logged In user 
+
+- Validation based on API Endpoint Payload and displaying appropriate Alert text for User Logged In Session 
+
+- Incorporated Cypress framework for Automation Testing to write tests for web development in React. 
+	◦	Login_Cypress_Test.js contains tests to check User Login based on REST API Endpoint status codes using demo credentials
+	◦	Registration_Cypress_Testing.js contains tests with New User details which triggers the /register endpoint on submission. Checks if Registration is Successful with status code =“2XX” or Failed with status code = “4XX” || “5XX”
+	◦	Buzz_Cypress_Testing.js validates if the Tweet Entered by User on Buzz Form Submission has invoked the “/post” Endpoint API successfully making the User Tweet Payload displayed as part of Profile along with previous entered ones using “/readPosts” API endpoints ok successful hits. 
+
+# Cypress Testing for Front End
+- Implemented Unit Test Cases using Jest for testing JavaScript code written as part of React framework . 
+
+- Test Cases are written for each of the below Components to test their functionality which is written as part of the “*.js” files as part of /sec/components/…”$ComponentName.test.js”
+
+	◦	Left Menu - Testing functions for Left Menu based on Individual links for Home, Users, Profile, Logout and Buzz
+	◦	ListTweets - Testing Functions for User Profile including Personal Details, Tweet data and Time zone to be displayed based on successful tweet submissions 
+	◦	Modal - Contains two files one for BasicModal and TweetModal containing Unit Test Functions for Testing Functionalities on User Page. Testing Buzz Functionalities along with API Endpoints for sending and loading tweets as part of Profile Page
+	◦	SignInForm- Contains Unit Tests to check Successful Login based on correct credentials and vice versa 
+	◦	SignUpForm- Contains Unit Tests to check Successful Registration based on proper validation cases for User name and email entered by the user
+	◦	User - Contains two files one for BannerInfo and InfoUser. The Unit Test Cases part of Banner Info checks for the functionality of Individual Components such as “Edit Profile” and “Follow”. It also includes cases to check if the images for profile have been loaded successfully or not 
+        
+        InfoUser Unit Test cases contains User Profile details Validation
