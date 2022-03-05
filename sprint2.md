@@ -189,7 +189,7 @@ Backend Demo: https://youtu.be/PWXH4vVxg20
 	<summary>Registration Form</summary>
 	
 	  Registration_Cypress_Testing.js 
-	  - Contains tests with New User details which triggers the /register endpoint on submission. Checks if Registration is Successful with status code =“2XX” 	       or Failed with status code = “4XX” || “5XX”
+	  - Contains tests with New User details which triggers the /register endpoint on submission. Checks if Registration is Successful with status code =“2XX” or Failed with status code = “4XX” || “5XX”
 
 	
   </details>
@@ -197,7 +197,7 @@ Backend Demo: https://youtu.be/PWXH4vVxg20
 	<summary>User Profile</summary>
 	
 	  Buzz_Cypress_Testing.js 
-	  - Validates if the Tweet Entered by User on Buzz Form Submission has invoked the “/post” Endpoint API successfully making the User Tweet Payload       	     displayed as part of Profile along with previous entered ones using “/readPosts” API endpoints ok successful hits. 
+	  - Validates if the Tweet Entered by User on Buzz Form Submission has invoked the “/post” Endpoint API successfully making the User Tweet Payload displayed as part of Profile along with previous entered ones using “/readPosts” API endpoints ok successful hits. 
 
 	
   </details>
