@@ -7,7 +7,7 @@ import(
 	"github.com/SaiKumarMalve/Gator-News/bd"
 	"github.com/SaiKumarMalve/Gator-News/models"
 )
-/* recordPost allows you to record the post in the database*/
+/* RecordPost allows you to record the post in the database*/
 func RecordPost(w http.ResponseWriter, r *http.Request){
 	var message models.Post
 	err := json.NewDecoder(r.Body).Decode(&message)

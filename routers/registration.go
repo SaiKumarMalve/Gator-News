@@ -8,6 +8,7 @@ import (
 	"github.com/SaiKumarMalve/Gator-News/models"
 )
 
+// Registartion handles the user registartion and calls the bd API to insert the User profile to DB
 func Registration(w http.ResponseWriter, r *http.Request) {
 
 	var t models.User
