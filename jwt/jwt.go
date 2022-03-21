@@ -7,6 +7,7 @@ import (
 	jwt "github.com/dgrijalva/jwt-go"
 )
 
+//Generates a JSON Web Token which is valid through out the login session
 func GenerateJWT(t models.User) (string, error) {
 	myKey := []byte("MastersofDeveleopment_groupofFacebook")
 	payload := jwt.MapClaims{
