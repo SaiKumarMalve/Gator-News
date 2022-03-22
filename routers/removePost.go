@@ -6,6 +6,7 @@ import (
 	"github.com/SaiKumarMalve/Gator-News/bd"
 )
 
+/* This removes the user's post */
 func RemovePost(w http.ResponseWriter, r *http.Request) {
 	ID := r.URL.Query().Get("id")
 	if len(ID) < 1 {
