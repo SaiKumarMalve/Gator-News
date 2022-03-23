@@ -9,6 +9,9 @@ Alekhya Gollamudi
 Jayanth Atcha
 Sai Kumar Malve 
 
+Front End Development - Tejaswini Kumkum, Jayanth Atcha
+Back End Development - Alekhya Gollamudi, Sai Kumar Malve 
+
 #Tech Stack:
 Front End - React
 Back End - GoLang 
