@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { API_HOST } from "../../../utils/constant";
 import banner from "../../../assets/png/logo.png";
 import avatar from "../../../assets/png/user.png";
 import "./BannerAvatar.scss";
+import ConfigModal from "../../Modal/ConfigModal";
 import { Button } from "react-bootstrap";
-export default function Routing(props) {
+
+export default function BannerAvatar(props) {
   const { user,loggedUser } = props;
   console.log(user);
+  const [showModal, setShowModal] = useState(false);
+
 
   const bannerUrl = user?.banner
     ? `${API_HOST}/obtenerBanner?id=${user.id}`
@@ -23,13 +27,23 @@ export default function Routing(props) {
         {user && (
         <div className="options">
           {loggedUser._id===user.id&&
-            <Button>Edit Profile </Button>}
+            <Button onClick={() => setShowModal(true)} >Edit Profile </Button>}
           {loggedUser._id!==user.id&&
             <Button>Follow</Button>
           }
             </div>
           )}
-          </div>
+
+      <ConfigModal
+        show={showModal}
+        setShow={setShowModal}
+        title="Edit Profile"
+      >
+          Edit Form
+          
+      </ConfigModal>
+
+    </div>
         
   );
 }
