@@ -4,7 +4,7 @@
   .modal-content {
     background-color: $background-grey-dark;
     border-radius: 25px;
-    overflow: hidden;
+    // overflow: hidden;
 
     .modal-header {
       border-bottom: 1px solid $border-grey;
@@ -17,7 +17,7 @@
         svg {
           width: 15px;
           height: 15px;
-          fill: $primary;
+          fill: aliceblue;
           margin-left: 10px;
           margin-right: 20px;
 
