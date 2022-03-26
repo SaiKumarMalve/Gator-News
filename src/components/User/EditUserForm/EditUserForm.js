@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Form, Button, Row, Col, Spinner } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import es from "date-fns/locale/es";
 
 
 import "./EditUserForm.scss";
@@ -45,6 +47,14 @@ export default function EditUserForm(props) {
           />
         </Form.Group>
 
+        <Form.Group>
+          <DatePicker
+            placeholder="Date of birth"
+            locale={"en"}
+            selected={new Date()}
+            
+          />
+        </Form.Group>
 
         <Button className="btn-submit" variant="primary" type="submit">
          Update
