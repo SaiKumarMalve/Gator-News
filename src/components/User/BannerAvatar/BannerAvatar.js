@@ -5,6 +5,7 @@ import avatar from "../../../assets/png/user.png";
 import "./BannerAvatar.scss";
 import ConfigModal from "../../Modal/ConfigModal";
 import { Button } from "react-bootstrap";
+import EditUserForm from "../EditUserForm";
 
 export default function BannerAvatar(props) {
   const { user,loggedUser } = props;
@@ -39,7 +40,7 @@ export default function BannerAvatar(props) {
         setShow={setShowModal}
         title="Edit Profile"
       >
-          Edit Form
+        <EditUserForm user={user} setShowModal={setShowModal} />
           
       </ConfigModal>
 
