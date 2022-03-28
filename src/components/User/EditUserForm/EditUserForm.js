@@ -5,8 +5,14 @@ import es from "date-fns/locale/es";
 import { useDropzone } from "react-dropzone";
 import { API_HOST } from "../../../utils/constant";
 import "./EditUserForm.scss";
+import { toast } from "react-toastify";
 import moment from "moment";
 import {Camera} from "../../../utils/Icons"
+import {
+  uploadBannerApi,
+  uploadAvatarApi,
+  updateInfoApi,
+} from "../../../api/user";
 
 export default function EditUserForm(props) {
     const { user, setShowModal } = props;
@@ -60,11 +66,17 @@ export default function EditUserForm(props) {
       };
 
     const onSubmit = e => {
-    e.preventDefault();   
-    console.log("Editing User....");
-    console.log(formData);
-      console.log(bannerFile);
-      console.log(avatarFile);
+      e.preventDefault();
+      if (bannerFile) {
+        uploadBannerApi(bannerFile).catch(() => {
+          toast.error("Error uploading the cover picture");
+        });
+      }
+      if (avatarFile) {
+        uploadAvatarApi(avatarFile).catch(() => {
+          toast.error("Error uploading the profile picture");
+        });
+      }
   };
 
   return (
