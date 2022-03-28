@@ -77,6 +77,13 @@ export default function EditUserForm(props) {
           toast.error("Error uploading the profile picture");
         });
       }
+      updateInfoApi(formData)
+      .then(() => {
+        setShowModal(false);
+      })
+      .catch(() => {
+        toast.error("Error al actualizar los datos");
+      });
   };
 
   return (
@@ -158,6 +165,5 @@ function initialValue(user) {
       biography: user.biography || "",
       location: user.location || "",
       website: user.website || "",
-      birthdate: user.birthdate || "",
     };
   }
