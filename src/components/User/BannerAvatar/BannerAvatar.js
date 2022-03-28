@@ -14,17 +14,20 @@ export default function BannerAvatar(props) {
 
 
   const bannerUrl = user?.banner
-    ? `${API_HOST}/obtenerBanner?id=${user.id}`
+    ? `${API_HOST}/getBanner?id=${user.id}`
     : null;
     const avatarUrl=user?.avatar?`${API_HOST}/getBanner?id=${user.id}`:avatar;
     console.log(loggedUser);
 
   return (
-      <div className="banner-avatar">
-        <img data-testid="banner_avatar" src={banner} alt="Gator" />
-        <div className="avatar">
-          <img  data-testid="user_avatar" src={avatar} alt="UserAvatar"/>
-        </div>
+    <div
+    className="banner-avatar"
+    style={{ backgroundImage: `url('${bannerUrl}')` }}
+  >
+    <div
+      className="avatar"
+      style={{ backgroundImage: `url('${avatarUrl}')` }}
+    />
         {user && (
         <div className="options">
           {loggedUser._id===user.id&&
