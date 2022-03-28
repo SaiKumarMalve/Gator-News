@@ -2,8 +2,8 @@ import React, { useState, useCallback } from "react";
 import { Form, Button, Row, Col, Spinner } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es";
-
-
+import { useDropzone } from "react-dropzone";
+import { API_HOST } from "../../../utils/constant";
 import "./EditUserForm.scss";
 import moment from "moment";
 
@@ -12,6 +12,18 @@ export default function EditUserForm(props) {
 
     const [formData, setFormData] = useState(initialValue(user));
  
+    const{bannerUrl, setstate}= useState(
+      user?.banner ? `$(API_HOST)/getBanner?id=${user.id}`:null
+    )
+    const onDropBanner = useCallback(acceptedFile=>{
+      console.log(acceptedFile);
+    })
+    const{getRootProps:getRootBannerProps,getInputProps:getInputBannerProps}=useDropzone({
+      accept:"image/jpeg,image/png",
+      noKeyboard:true,
+      multiple:false,
+      ondrop:onDropBanner
+    })
     const onChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
@@ -25,7 +37,10 @@ export default function EditUserForm(props) {
 
   return (
     <div className="edit-user-form">
-
+      <div className="banner" style={{backgroundImage:`url('${bannerUrl}')`}}
+      {...getRootBannerProps()}>
+        <input type="file"/>
+      </div>
       <Form onSubmit={onSubmit}>
         <Form.Group>
           <Row>
@@ -87,6 +102,6 @@ function initialValue(user) {
       biography: user.biography || "",
       location: user.location || "",
       website: user.website || "",
-      dateOfBirth: user.dateOfBirth || "",
+      birthdate: user.birthdate || "",
     };
   }
