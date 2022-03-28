@@ -13,24 +13,48 @@ export default function EditUserForm(props) {
 
     const [formData, setFormData] = useState(initialValue(user));
  
-    const{bannerUrl, setBannerUrl}= useState(
-      user?.banner ? `$(API_HOST)/getBanner?id=${user.id}`:null
-    )
-    const{bannerFile, setBannerFile}= useState(null)
+    const [bannerUrl, setBannerUrl] = useState(
+      user?.banner ? `${API_HOST}/getBanner?id=${user.id}` : null
+    );
+    const [bannerFile, setBannerFile] = useState(null);
 
-    const onDropBanner = useCallback(acceptedFile=>{
-      const file=acceptedFile[0];
-      console.log(URL.createObjectURL(file));
-      setBannerUrl(URL.createObjectURL(file));
-      setBannerFile(file);
-      console.log(acceptedFile);
-    })
-    const{getRootProps:getRootBannerProps,getInputProps:getInputBannerProps}=useDropzone({
-      accept:"image/jpeg,image/png",
-      noKeyboard:true,
-      multiple:false,
-      ondrop:onDropBanner
-    })
+    const [avatarUrl, setAvatarUrl] = useState(
+      user?.avatar ? `${API_HOST}/getAvatar?id=${user.id}` : null
+    );
+    const [avatarFile, setAvatarFile] = useState(null);
+  
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  const onDropBanner = useCallback((acceptedFile) => {
+    const file = acceptedFile[0];
+    setBannerUrl(URL.createObjectURL(file));
+    setBannerFile(file);
+  });
+
+  const {
+    getRootProps: getRootBannerProps,
+    getInputProps: getInputBannerProps,
+  } = useDropzone({
+    accept: "image/jpeg, image/png",
+    noKeyboard: true,
+    multiple: false,
+    onDrop: onDropBanner,
+  });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const onDropAvatar = useCallback((acceptedFile) => {
+      const file = acceptedFile[0];
+      setAvatarUrl(URL.createObjectURL(file));
+      setAvatarFile(file);
+    });
+    const {
+      getRootProps: getRootAvatarProps,
+      getInputProps: getInputAvatarProps,
+    } = useDropzone({
+      accept: "image/jpeg, image/png",
+      noKeyboard: true,
+      multiple: false,
+      onDrop: onDropAvatar,
+    });
     const onChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
@@ -40,15 +64,27 @@ export default function EditUserForm(props) {
     console.log("Editing User....");
     console.log(formData);
       console.log(bannerFile);
+      console.log(avatarFile);
   };
 
   return (
     <div className="edit-user-form">
-      <div className="banner" style={{backgroundImage:`url('${bannerUrl}')`}}
-      {...getRootBannerProps()}>
-        <input type="file"/>
-        <Camera></Camera>
+      <div
+        className="banner"
+        style={{ backgroundImage: `url('${bannerUrl}')` }}
+        {...getRootBannerProps()}
+      >
+        <input {...getInputBannerProps()} />
+        <Camera />
       </div>
+      <div
+        className="avatar"
+        style={{ backgroundImage: `url('${avatarUrl}')` }}
+        {...getRootAvatarProps()}>
+        <input {...getInputAvatarProps()} />
+        <Camera />
+      </div>
+
       <Form onSubmit={onSubmit}>
         <Form.Group>
           <Row>
