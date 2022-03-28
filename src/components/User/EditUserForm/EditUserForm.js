@@ -83,6 +83,9 @@ export default function EditUserForm(props) {
       })
       .catch(() => {
         toast.error("Error al actualizar los datos");
+      })
+      .finally(() => {
+        window.location.reload();
       });
   };
 
