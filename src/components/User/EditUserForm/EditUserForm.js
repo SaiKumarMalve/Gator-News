@@ -6,16 +6,23 @@ import { useDropzone } from "react-dropzone";
 import { API_HOST } from "../../../utils/constant";
 import "./EditUserForm.scss";
 import moment from "moment";
+import {Camera} from "../../../utils/Icons"
 
 export default function EditUserForm(props) {
     const { user, setShowModal } = props;
 
     const [formData, setFormData] = useState(initialValue(user));
  
-    const{bannerUrl, setstate}= useState(
+    const{bannerUrl, setBannerUrl}= useState(
       user?.banner ? `$(API_HOST)/getBanner?id=${user.id}`:null
     )
+    const{bannerFile, setBannerFile}= useState(null)
+
     const onDropBanner = useCallback(acceptedFile=>{
+      const file=acceptedFile[0];
+      console.log(URL.createObjectURL(file));
+      setBannerUrl(URL.createObjectURL(file));
+      setBannerFile(file);
       console.log(acceptedFile);
     })
     const{getRootProps:getRootBannerProps,getInputProps:getInputBannerProps}=useDropzone({
@@ -32,7 +39,7 @@ export default function EditUserForm(props) {
     e.preventDefault();   
     console.log("Editing User....");
     console.log(formData);
-
+      console.log(bannerFile);
   };
 
   return (
@@ -40,6 +47,7 @@ export default function EditUserForm(props) {
       <div className="banner" style={{backgroundImage:`url('${bannerUrl}')`}}
       {...getRootBannerProps()}>
         <input type="file"/>
+        <Camera></Camera>
       </div>
       <Form onSubmit={onSubmit}>
         <Form.Group>
