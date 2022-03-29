@@ -28,8 +28,8 @@ export default function EditUserForm(props) {
       user?.avatar ? `${API_HOST}/getAvatar?id=${user.id}` : null
     );
     const [avatarFile, setAvatarFile] = useState(null);
-  
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const [loading, setLoading] = useState(false);
+
   const onDropBanner = useCallback((acceptedFile) => {
     const file = acceptedFile[0];
     setBannerUrl(URL.createObjectURL(file));
@@ -65,25 +65,33 @@ export default function EditUserForm(props) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
 
-    const onSubmit = e => {
+    const onSubmit = async(e) => {
       e.preventDefault();
+      setLoading(true);
+
+
       if (bannerFile) {
-        uploadBannerApi(bannerFile).catch(() => {
+        await uploadBannerApi(bannerFile).catch(() => {
           toast.error("Error uploading the cover picture");
         });
       }
       if (avatarFile) {
-        uploadAvatarApi(avatarFile).catch(() => {
+        await uploadAvatarApi(avatarFile).catch(() => {
           toast.error("Error uploading the profile picture");
         });
       }
-      updateInfoApi(formData)
+      await updateInfoApi(formData)
       .then(() => {
         setShowModal(false);
       })
       .catch(() => {
         toast.error("Error al actualizar los datos");
       });
+
+      setLoading(false);
+
+      window.location.reload();
+      
   };
 
   return (
@@ -151,7 +159,7 @@ export default function EditUserForm(props) {
         </Form.Group>
 
         <Button className="btn-submit" variant="primary" type="submit">
-         Update
+         {loading && <Spinner animation="border" size="sm" />} Update
         </Button>
       </Form>
     </div>
