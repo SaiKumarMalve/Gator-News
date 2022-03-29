@@ -7,17 +7,33 @@ import ConfigModal from "../../Modal/ConfigModal";
 import { Button } from "react-bootstrap";
 import EditUserForm from "../EditUserForm";
 
+import { checkFollowApi } from "../../../api/follow";
+
 export default function BannerAvatar(props) {
   const { user,loggedUser } = props;
   console.log(user);
   const [showModal, setShowModal] = useState(false);
 
+  const [following, setFollowing] = useState(null);
 
   const bannerUrl = user?.banner
     ? `${API_HOST}/getBanner?id=${user.id}`
     : null;
     const avatarUrl=user?.avatar?`${API_HOST}/getBanner?id=${user.id}`:avatar;
     console.log(loggedUser);
+
+    useEffect(() => {
+      console.log("asas");
+      if (user) {
+        checkFollowApi(user?.id).then(response => {
+          if (response?.status) {
+            setFollowing(true);
+          } else {
+            setFollowing(false);
+          }
+        });
+      }
+    }, [user]);
 
   return (
     <div
@@ -32,9 +48,15 @@ export default function BannerAvatar(props) {
         <div className="options">
           {loggedUser._id===user.id&&
             <Button onClick={() => setShowModal(true)} >Edit Profile </Button>}
-          {loggedUser._id!==user.id&&
-            <Button>Follow</Button>
-          }
+          {loggedUser._id !== user.id &&
+            following !== null &&
+            (following ? (
+              <Button>
+                <span>Following</span>
+              </Button>
+            ) : (
+              <Button>Follow</Button>
+            ))}
             </div>
           )}
 
