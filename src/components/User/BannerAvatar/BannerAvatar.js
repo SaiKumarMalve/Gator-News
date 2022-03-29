@@ -7,18 +7,48 @@ import ConfigModal from "../../Modal/ConfigModal";
 import { Button } from "react-bootstrap";
 import EditUserForm from "../EditUserForm";
 
+import { checkFollowApi , followUserApi, unfollowUserApi} from "../../../api/follow";
+
 export default function BannerAvatar(props) {
   const { user,loggedUser } = props;
   console.log(user);
   const [showModal, setShowModal] = useState(false);
 
-
+  const [following, setFollowing] = useState(null);
+  const [reloadFollow, setReloadFollow] = useState(false);
+  console.log(following);
   const bannerUrl = user?.banner
     ? `${API_HOST}/getBanner?id=${user.id}`
     : null;
     const avatarUrl=user?.avatar?`${API_HOST}/getBanner?id=${user.id}`:avatar;
     console.log(loggedUser);
 
+    useEffect(() => {
+      if (user) {
+        checkFollowApi(user?.id).then(response => {
+          if (response?.status) {
+            setFollowing(true);
+          } else {
+            setFollowing(false);
+          }
+        });
+      }     setReloadFollow(false);
+
+    }, [user, reloadFollow]);
+
+    const onFollow = () => {
+      followUserApi(user.id).then(() => {
+        setReloadFollow(true);
+      });
+    };
+
+    const onUnfollow = () => {
+      unfollowUserApi(user.id).then(() => {
+        setReloadFollow(true);
+      });
+    };
+
+    
   return (
     <div
     className="banner-avatar"
@@ -30,11 +60,18 @@ export default function BannerAvatar(props) {
     />
         {user && (
         <div className="options">
-          {loggedUser._id===user.id&&
-            <Button onClick={() => setShowModal(true)} >Edit Profile </Button>}
-          {loggedUser._id!==user.id&&
-            <Button>Follow</Button>
-          }
+          {loggedUser._id === user.id && (
+            <Button onClick={() => setShowModal(true)}>Edit Profile</Button>
+          )}
+          {loggedUser._id !== user.id &&
+            following !== null &&
+            (following ? (
+              <Button onClick={onUnfollow} className="unfollow" >
+                <span>Following</span>
+              </Button>
+            ) : (
+              <Button onClick={onFollow} >Follow</Button>
+            ))}
             </div>
           )}
 
