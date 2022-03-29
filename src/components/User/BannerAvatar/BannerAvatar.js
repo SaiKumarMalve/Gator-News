@@ -7,7 +7,7 @@ import ConfigModal from "../../Modal/ConfigModal";
 import { Button } from "react-bootstrap";
 import EditUserForm from "../EditUserForm";
 
-import { checkFollowApi } from "../../../api/follow";
+import { checkFollowApi , followUserApi} from "../../../api/follow";
 
 export default function BannerAvatar(props) {
   const { user,loggedUser } = props;
@@ -15,6 +15,7 @@ export default function BannerAvatar(props) {
   const [showModal, setShowModal] = useState(false);
 
   const [following, setFollowing] = useState(null);
+  const [reloadFollow, setReloadFollow] = useState(false);
 
   const bannerUrl = user?.banner
     ? `${API_HOST}/getBanner?id=${user.id}`
@@ -23,7 +24,6 @@ export default function BannerAvatar(props) {
     console.log(loggedUser);
 
     useEffect(() => {
-      console.log("asas");
       if (user) {
         checkFollowApi(user?.id).then(response => {
           if (response?.status) {
@@ -32,8 +32,15 @@ export default function BannerAvatar(props) {
             setFollowing(false);
           }
         });
-      }
-    }, [user]);
+      }     setReloadFollow(false);
+
+    }, [user, reloadFollow]);
+
+    const onFollow = () => {
+      followUserApi(user.id).then(() => {
+        setReloadFollow(true);
+      });
+    };
 
   return (
     <div
@@ -46,8 +53,9 @@ export default function BannerAvatar(props) {
     />
         {user && (
         <div className="options">
-          {loggedUser._id===user.id&&
-            <Button onClick={() => setShowModal(true)} >Edit Profile </Button>}
+          {loggedUser._id === user.id && (
+            <Button onClick={() => setShowModal(true)}>Edit Profile</Button>
+          )}
           {loggedUser._id !== user.id &&
             following !== null &&
             (following ? (
@@ -55,7 +63,7 @@ export default function BannerAvatar(props) {
                 <span>Following</span>
               </Button>
             ) : (
-              <Button>Follow</Button>
+              <Button onClick={onFollow} >Follow</Button>
             ))}
             </div>
           )}
