@@ -21,20 +21,19 @@ func ReadFollowersPosts(ID string, page int) ([]models.ReturnFollowersPosts, boo
 	conditions = append(conditions, bson.M{"$match": bson.M{"userid": ID}})
 	conditions = append(conditions, bson.M{
 		"$lookup": bson.M{
-			"from":         "post",
+			"from":         "news",
 			"localField":   "userrelationshipid",
 			"foreignField": "userid",
-			"as":           "post",
+			"as":           "news",
 		}})
-	conditions = append(conditions, bson.M{"$unwind": "$post"})
-	conditions = append(conditions, bson.M{"$sort": bson.M{"post.date": -1}})
+
+	conditions = append(conditions, bson.M{"$unwind": "$news"})
+	conditions = append(conditions, bson.M{"$sort": bson.M{"News.date": -1}})
 	conditions = append(conditions, bson.M{"$skip": skip})
 	conditions = append(conditions, bson.M{"$limit": 20})
 
 	cursor, err := col.Aggregate(ctx, conditions)
 	var result []models.ReturnFollowersPosts
-	println("CURSOR")
-	println(ID)
 	err = cursor.All(ctx, &result)
 	if err != nil {
 		return result, false
