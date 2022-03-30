@@ -8,8 +8,8 @@ import (
 	"github.com/SaiKumarMalve/Gator-News/bd"
 )
 
-/*ReadPostRelations reads the posts of all user followers*/
-func ReadPostRelations(w http.ResponseWriter, r *http.Request) {
+/*ReadFollowersPosts reads the posts of all user followers*/
+func ReadFollowersPosts(w http.ResponseWriter, r *http.Request) {
 	if len(r.URL.Query().Get("page")) < 1 {
 		http.Error(w, "Send the page number as parameter", http.StatusBadRequest)
 		return
