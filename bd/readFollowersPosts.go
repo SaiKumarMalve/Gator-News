@@ -21,8 +21,8 @@ func ReadFollowersPosts(ID string, page int) ([]models.ReturnFollowersPosts, boo
 	conditions = append(conditions, bson.M{"$match": bson.M{"userid": ID}})
 	conditions = append(conditions, bson.M{
 		"$lookup": bson.M{
-			"from":         "tweet",
-			"localfield":   "userrelationshipid",
+			"from":         "post",
+			"localField":   "userrelationshipid",
 			"foreignField": "userid",
 			"as":           "post",
 		}})
@@ -33,6 +33,8 @@ func ReadFollowersPosts(ID string, page int) ([]models.ReturnFollowersPosts, boo
 
 	cursor, err := col.Aggregate(ctx, conditions)
 	var result []models.ReturnFollowersPosts
+	println("CURSOR")
+	println(ID)
 	err = cursor.All(ctx, &result)
 	if err != nil {
 		return result, false
