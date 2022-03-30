@@ -14,10 +14,9 @@ func ReadFollowersPosts(ID string, page int) ([]models.ReturnFollowersPosts, boo
 	defer cancel()
 
 	db := MongoCN.Database("gatorNews")
-	col := db.Collection("users")
+	col := db.Collection("relationship")
 
 	skip := (page - 1) * 20
-
 	conditions := make([]bson.M, 0)
 	conditions = append(conditions, bson.M{"$match": bson.M{"userid": ID}})
 	conditions = append(conditions, bson.M{
