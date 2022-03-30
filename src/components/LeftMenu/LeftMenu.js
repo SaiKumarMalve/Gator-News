@@ -35,7 +35,7 @@ export default function LeftMenu(props) {
       <Link to="/">
         <FontAwesomeIcon icon={faHome} /> Home
       </Link>
-      <Link to="/users">
+      <Link to="/allusers">
         <FontAwesomeIcon icon={faUsers} /> Users
       </Link>
       <Link to={`/${user?._id}`}>
