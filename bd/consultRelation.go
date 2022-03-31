@@ -2,7 +2,6 @@ package bd
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/SaiKumarMalve/Gator-News/models"
@@ -18,15 +17,13 @@ func ConsultRelation(t models.Relationship) (bool, error) {
 	col := db.Collection("relationship")
 
 	condition := bson.M{
-		"userID":         t.UserID,
-		"userRelationID": t.UserRelationshipID,
+		"userid":             t.UserID,
+		"userrelationshipid": t.UserRelationshipID,
 	}
 
 	var result models.Relationship
-	fmt.Println(result)
 	err := col.FindOne(ctx, condition).Decode(&result)
 	if err != nil {
-		fmt.Println(err.Error())
 		return false, err
 	}
 	return true, nil
