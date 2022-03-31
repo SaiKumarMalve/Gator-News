@@ -2,7 +2,7 @@ import React from "react";
 import { map, isEmpty } from "lodash";
 
 import "./ListUsers.scss";
-
+import User from "./User";
 export default function ListUsers(props) {
   const { users } = props;
   console.log(props);
@@ -14,9 +14,7 @@ export default function ListUsers(props) {
   return (
     <ul className="list-users">
       {map(users, (user) => (
-        <h2 key={user.id}>
-       {user?.name}{user?.lastname}
-       </h2>
+        <User key={user.id} user={user} />
       ))}
     </ul>
   );

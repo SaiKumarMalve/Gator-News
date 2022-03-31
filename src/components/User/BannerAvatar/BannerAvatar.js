@@ -18,15 +18,16 @@ export default function BannerAvatar(props) {
   const [following, setFollowing] = useState(null);
   const [reloadFollow, setReloadFollow] = useState(false);
   const bannerUrl = user?.banner
-    ? `${API_HOST}/Banner?id=${user.id}`
+    ? `${API_HOST}/getBanner?id=${user.id}`
     : null;
   const avatarUrl = user?.avatar
-    ? `${API_HOST}/Avatar?id=${user.id}`
+    ? `${API_HOST}/getAvatar?id=${user.id}`
     : AvatarNoFound;
 
   useEffect(() => {
     if (user) {
       checkFollowApi(user?.id).then(response => {
+        console.log(response)
         if (response?.status) {
           setFollowing(true);
         } else {
@@ -34,11 +35,12 @@ export default function BannerAvatar(props) {
         }
       });
     }
-    setReloadFollow(true);
+    setReloadFollow(false);
   }, [user, reloadFollow]);
 
   const onFollow = () => {
     followUserApi(user.id).then(() => {
+      console.log(followUserApi(user.id))
       setReloadFollow(true);
     });
   };
@@ -61,7 +63,7 @@ export default function BannerAvatar(props) {
       {user && (
         <div className="options">
           {loggedUser._id === user.id && (
-            <Button onClick={() => setShowModal(true)}>Edit Profile</Button>
+            <Button onClick={() => setShowModal(true)}>Edit profile</Button>
           )}
 
           {loggedUser._id !== user.id &&
@@ -71,7 +73,7 @@ export default function BannerAvatar(props) {
                 <span>Unfollow</span>
               </Button>
             ) : (
-              <Button onClick={onFollow}>Follow</Button>
+              <Button onClick={onFollow}>follow</Button>
             ))}
         </div>
       )}
