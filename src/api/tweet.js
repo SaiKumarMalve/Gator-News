@@ -48,7 +48,7 @@ export function getUserTweetsApi(idUser, page) {
 }
 
 export function getTweetsFollowersApi(page = 1) {
-  const url = `${API_HOST}/getTweetsFollowers?page=${page}`;
+  const url = `${API_HOST}/readFollowersPosts?page=${page}`;
 
   const params = {
     headers: {

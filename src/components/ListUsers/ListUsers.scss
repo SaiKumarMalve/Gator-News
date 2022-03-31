@@ -1,5 +1,13 @@
 @import "../../scss/index.scss";
+img{
+  width: 64px;
+  height: 64px;
+}
+h5{
 
+  color: black;
+  border-bottom: 1px solid $border-grey;
+}
 .list-users {
   padding: 0;
 
@@ -7,6 +15,8 @@
     padding: 15px 30px;
     color: $font-light;
     border-bottom: 1px solid $border-grey;
+    width: 64px;
+    height:64px;
 
     &:hover {
       color: $font-light;
