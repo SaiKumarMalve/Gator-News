@@ -38,7 +38,7 @@ func TestEncryptPassword(t *testing.T) {
 }
 
 func TestInsertPost(t *testing.T) {
-	post := models.RecordPost{"6220338c9f185341ce8a7d93", "Test User Message", time.Now()}
+	post := models.RecordPost{"624764520f5c75a01e16720f", "Test User Message", time.Now()}
 
 	ID, bInserted, error := bd.InsertPost(post)
 
@@ -101,7 +101,7 @@ func TestSearchProfile(t *testing.T) {
 func TestModifyRecord(t *testing.T) {
 	time := time.Now()
 	ID := "624764520f5c75a01e16720f"
-	User := models.User{primitive.NewObjectID(), "Test", "User", time, "testuser1@se.com", "123456", "", "", "", "", ""}
+	User := models.User{primitive.NewObjectID(), "Test", "User", time, "testuser@se.com", "123456", "", "", "", "", ""}
 
 	bSuccess, error := bd.ModifyRecord(User, ID)
 
