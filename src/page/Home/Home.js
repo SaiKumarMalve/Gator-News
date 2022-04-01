@@ -1,17 +1,3 @@
-// import React from "react";
-// import BasicLayout from "../../layout/BasicLayout";
-// import "./Home.scss";
-// import UF from "../../assets/png/UF.png"
-// export default function Home(props) {
-//     const{setRefreshCheckLogin} = props;
-//     return(
-//             <BasicLayout className="home" controls>
-//              <img  className='logo' src={UF} alt="Home" />
-//             </BasicLayout>
-//     )
-// }
-
-
 import React, { useState, useEffect } from "react";
 import { Button, Spinner } from "react-bootstrap";
 import BasicLayout from "../../layout/BasicLayout";
@@ -29,6 +15,7 @@ export default function Home(props) {
   useEffect(() => {
     getTweetsFollowersApi(page)
       .then((response) => {
+        console.log(response)
         if (!tweets && response) {
           setTweets(formatModel(response));
         } else {
@@ -80,12 +67,16 @@ export default function Home(props) {
 function formatModel(tweets) {
   const tweetsTemp = [];
   tweets.forEach((tweet) => {
+    console.log(tweet)
     tweetsTemp.push({
       _id: tweet._id,
       userID: tweet.userID,
-      message: tweet.Tweet.message,
-      date: tweet.Tweet.date,
+      message: tweet.News.message,
+      date: tweet.News.date,
+      
     });
+    
   });
+  
   return tweetsTemp;
 }
