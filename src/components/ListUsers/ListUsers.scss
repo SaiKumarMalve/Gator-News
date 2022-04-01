@@ -4,10 +4,12 @@ img{
   height: 64px;
 }
 h5{
-
   color: black;
   border-bottom: 1px solid $border-grey;
+  width: 100%;
+  text-decoration: none;
 }
+
 .list-users {
   padding: 0;
 

@@ -15,7 +15,7 @@ export default function User(props) {
   }, [user]);
 
   return (
-    <Media as={Link} to={`/${user.id}`} className="users__user">
+    <Media as={Link} to={`/${user.id}`} class="image">
       <Image
         width={64}
         height={64}
@@ -25,15 +25,12 @@ export default function User(props) {
           userInfo?.avatar
             ? `${API_HOST}/getAvatar?id=${user.id}`
             : AvatarNoFound
-        }
-        alt={`${user.name} ${user.lastname}`}
-      />
-      <Media.Body>
+        }/>
+        < Media.Body>
         <h5>
           {user.name} {user.lastname}
         </h5>
-        <p>{userInfo?.biography}</p>
-      </Media.Body>
+       </Media.Body>
     </Media>
   );
 }

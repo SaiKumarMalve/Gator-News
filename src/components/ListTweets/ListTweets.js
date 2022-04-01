@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import { map } from "lodash";
 import localization from "moment/locale/es"
 import moment from "moment";
-import AvatarNoFound from "../../assets/png/logo.png";
+import AvatarNoFound from "../../assets/png/alekhya.jpeg";
 import { API_HOST } from "../../utils/constant";
 import { getUserApi } from "../../api/user";
 import { replaceURLWithHTMLLinks } from "../../utils/functions";
@@ -30,8 +30,10 @@ function Tweet(props) {
   useEffect(() => {
     getUserApi(tweet.userID).then((response) => {
       setUserInfo(response);
+      console.log(response)
       setAvatarUrl(
         response?.avatar
+        
           ? `${API_HOST}/getAvatar?id=${response.id}`
           : AvatarNoFound
       );
