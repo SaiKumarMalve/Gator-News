@@ -91,9 +91,8 @@ func TestTryLogin(t *testing.T) {
 }
 
 func TestSearchProfile(t *testing.T) {
-	ID := "6220338c9f185341ce8a7d93"
+	ID := "624764520f5c75a01e16720f"
 	user, error := bd.SearchProfile(ID)
-
 	assert.Equal(t, "Test", user.Name, "User First Name doesn't Match")
 	assert.Equal(t, "testuser@se.com", user.Email, "Email doesn't Match")
 	assert.Equal(t, nil, error, "An error occured when Searching the profile")
@@ -101,7 +100,7 @@ func TestSearchProfile(t *testing.T) {
 
 func TestModifyRecord(t *testing.T) {
 	time := time.Now()
-	ID := "6220338c9f185341ce8a7d93"
+	ID := "624764520f5c75a01e16720f"
 	User := models.User{primitive.NewObjectID(), "Test", "User", time, "testuser1@se.com", "123456", "", "", "", "", ""}
 
 	bSuccess, error := bd.ModifyRecord(User, ID)

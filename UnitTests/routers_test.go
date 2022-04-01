@@ -51,7 +51,6 @@ func TestRegistration(t *testing.T) {
 //Login function Unit test case
 func TestLogin(t *testing.T) {
 	var users []models.User
-	// req := httptest.NewRequest(http.MethodGet, "/upper?word=abc", nil)
 
 	request, _ := http.NewRequest("POST", "https://gatornews.herokuapp.com/login", strings.NewReader("{\"email\": \"testuser@se.com\",\"password\": \"123456\"}"))
 	response := httptest.NewRecorder()
@@ -89,7 +88,7 @@ func deleteTestUser(email string) bool {
 func TestViewProfile(t *testing.T) {
 	var users []models.User
 
-	request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/viewProfile?id=6220338c9f185341ce8a7d93", strings.NewReader(``))
+	request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/viewProfile?id=624764520f5c75a01e16720f", strings.NewReader(``))
 	response := httptest.NewRecorder()
 	router := mux.NewRouter()
 	router.HandleFunc("/viewProfile", middlew.CheckBD(routers.ViewProfile)).Methods("GET")
