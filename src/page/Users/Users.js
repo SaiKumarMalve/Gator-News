@@ -17,7 +17,9 @@ function AllUsers(props) {
   const [typeUser, setTypeUser] = useState(params.type || "follow");
   const [btnLoading, setBtnLoading] = useState(false);
 
-
+  // const [onSearch] = useDebouncedCallback((value) => {
+  // console.log(value)
+  // });
 
   useEffect(() => {
     getFollowsApi(queryString.stringify(params))
@@ -75,7 +77,7 @@ function AllUsers(props) {
         <input
           type="text"
           placeholder="Search Users"
-         
+          onChange={(e) => history.push({search:queryString.stringify({...params,search: e.target.value,page:1})})}
         />
       </div>
 
@@ -97,14 +99,14 @@ function AllUsers(props) {
       {!users ? (
         <div className="users__loading">
           <Spinner animation="border" variant="info" />
-          Following
+          User Details Loading
         </div>
       ) : (
         <>
           <ListUsers users={users} />
           <Button onClick={moreData} className="load-more">
             {!btnLoading ? (
-              btnLoading !== 0 && "Next Page"
+              btnLoading !== 0 && "Loading"
             ) : (
               <Spinner
                 as="span"
