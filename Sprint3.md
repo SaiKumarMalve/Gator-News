@@ -58,3 +58,8 @@ Backend Demo: https://youtu.be/WQyZxikPB5g
 7. Rendering All the followed Users which are part of the User Connection. 
 8. Introduced Pagination Mechanism where each User Profile is displayed under Users Tab in a more visual way. 
 9. Incorporated Error404 Page for users to get redirected when they navigate to any URL which is outside the website.
+# Steps for running the project:
+1. Install the node modules using "npm install" command.
+2. To start the project , type "yarn start".
+3. For testing unit test cases, "npm test" command is required.
+4. For cypress testing, change test field in package.json to cypress open.
