@@ -17,8 +17,17 @@ describe('AllUsers', () => {
            </MemoryRouter>
           );
         expect(screen.queryAllByText("Users")).toHaveLength(2);
+        
       });
       
-      
+      test("Search Users field should have Placeholder",()=>{
+        const view = render(
+            <MemoryRouter>
+              <AllUsers/>
+           </MemoryRouter>
+          );        
+          screen.queryByPlaceholderText(/Search Users/i)
+      });
 
+      
 });
