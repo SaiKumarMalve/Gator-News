@@ -114,3 +114,50 @@ func TestModifyRecord(t *testing.T) {
 	assert.Equal(t, expectedDay, actualDay, "Day in Date of Birth doesn't match")
 	assert.Equal(t, nil, error, "An error occured when Modifying the Record")
 }
+
+func TestConsultRelation(t *testing.T){
+	UserID  := "6220338c9f185341ce8a7d93"
+	UserRelationshipID := "621bf76b40beb317228291e2"
+	st,_:= bd.ConsultRelation(models.Relationship{UserID, UserRelationshipID})
+	assert.Equal(t, true, st, "Failed")
+}
+
+func TestInsertRelationship(t *testing.T){
+	User := models.Relationship{"6220338c9f185341ce8a7d93","6243500b39758ce6a8d758ae"}
+	bInserted, error := bd.InsertRelationship(User)
+
+	assert.Equal(t, true, bInserted, "Insertion of the relationship "+User.UserID+" failed")
+	assert.Equal(t, nil, error, "An error occured when inserting the relationship "+User.UserID)
+
+	
+}
+
+func TestReadAllUsers(t *testing.T){
+	
+
+	_,bSuccess := bd.ReadAllUsers("6220338c9f185341ce8a7d93",1,"","follow")
+
+	assert.Equal(t, true, bSuccess, "Reading All users failed")
+	
+}
+func TestReadFollowersPosts(t *testing.T){
+	
+
+	_,bSuccess := bd.ReadFollowersPosts("6220338c9f185341ce8a7d93",1)
+
+	assert.Equal(t, true, bSuccess, "Reading Followers Posts failed")
+	
+}
+
+func TestDeleteRelationship(t *testing.T){
+	UserID  := "6220338c9f185341ce8a7d93"
+	UserRelationshipID := "621bf76b40beb317228291e2"
+	st,_:= bd.ConsultRelation(models.Relationship{UserID, UserRelationshipID})
+	assert.Equal(t, true, st, "Failed")
+}
+func TestProfileLookup(t *testing.T) {
+	ID := "6243500b39758ce6a8d758ae"
+	user, _ := bd.ProfileLookup(ID)
+	assert.Equal(t, "Jayanth", user.Name, "User First Name doesn't Match")
+	
+}
