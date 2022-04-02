@@ -10,6 +10,10 @@ Backend Demo: https://youtu.be/WQyZxikPB5g
 2. highRelationship API was created to register a relationship between the users. In order to achieve this, We have a created "Relationship.go" model which records the relationship of one user with another.
 3. In order to delete the relationship between the users, we have created lowRelationship API. Using this, we delete the relationship in the database.
 4. userList API is used for retrieving the list of users in the database.This basically depends on 3 parameters - (type,page,search). If type is follow, it generates the list of users that the logged in user follows. If the type is new, it generates a list of all the new users. We can also search for a particular user by specifying search parameter.
+5. readFollowersPosts API returns the posts of all the followers of the current user. It takes page as a parameter.
+6. consultRelation API takes id(User ID) as a parameter. The API checks if the current user and the user whose id is provided are related (following) or not.
+7. uploadAvatar and uploadBanner APIs take an image as input in the HTTP request body. It sets the current user's profile picture and display picture.
+8. getAvatar and getBanner APIs take id as a parameter and returns the Avatar or Banner of the user whose id is provided
  
 # Frontend:
 1. Created Config Modal and Structure for Edit Profile under User Modal for Profile User to Update their Personal Information Content on Website. 
