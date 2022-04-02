@@ -66,3 +66,30 @@ func TestUser(t *testing.T) {
 
 	assert.Equal(t, User.Email, "testuser@se.com", "User email is must for any user %s", User)
 }
+
+//RequestConsultRelation model Unit test case
+func TestRequestConsultRelation(t *testing.T) {
+	RequestConsultRelation := models.RequestConsultRelation{true}
+
+	assert.Equal(t, RequestConsultRelation.Status, true, "The status has not been set")
+}
+
+//Relationship model Unit Test case
+func TestRelationship(t *testing.T) {
+	Relationship := models.Relationship{"FAFAFAFAFAFA", "FBFBFBFBFBFB"}
+	assert.Equal(t, Relationship.UserID, "FAFAFAFAFAFA", "UserID has not been set in the model")
+	assert.Equal(t, Relationship.UserRelationshipID, "FBFBFBFBFBFB", "UserRelationshipID has not been set in the model")
+}
+
+//ReturnPost model Unit Test case
+func TestReturnPost(t *testing.T) {
+	ReturnPost := models.ReturnPost{primitive.NewObjectID(), "FAFAFAFAFAFA", "Test Message", time.Now()}
+	if ReturnPost.ID.Hex() == "" {
+		t.Errorf("ID is must for a ReturnPost Structure %s", ReturnPost)
+	}
+	assert.Equal(t, ReturnPost.UserID, "FAFAFAFAFAFA", "UserID has not been set in the model")
+	assert.Equal(t, ReturnPost.Message, "Test Message", "Message for the post has not been entered")
+	if ReturnPost.Date.IsZero() {
+		t.Errorf("Date not set to current date: %v.", ReturnPost.Date)
+	}
+}
