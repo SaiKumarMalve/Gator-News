@@ -180,3 +180,103 @@ func TestProcessToken(t *testing.T) {
 	}
 
 }
+func TestReadFollowersPostsRouter(t *testing.T) {
+	var users []models.User
+
+	request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/readFollowersPosts?page=1", strings.NewReader(``))
+	response := httptest.NewRecorder()
+	router := mux.NewRouter()
+	router.HandleFunc("/readFollowersPosts", middlew.CheckBD(routers.ReadFollowersPosts)).Methods("GET")
+	router.ServeHTTP(response, request)
+	assert.Equal(t, 201, response.Code, "OK response is expected")
+	err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+	if err != nil {
+		fmt.Println("err is ", err)
+	}
+
+
+}
+
+func TestRemovePostRouter(t *testing.T) {
+	var users []models.User
+
+	request, _ := http.NewRequest("DELETE", "https://gatornews.herokuapp.com/removePost?id=6238b1b33af5f47b275985e3", strings.NewReader(``))
+	response := httptest.NewRecorder()
+	router := mux.NewRouter()
+	router.HandleFunc("/removePost", middlew.CheckBD(routers.RemovePost)).Methods("DELETE")
+	router.ServeHTTP(response, request)
+	assert.Equal(t, 201, response.Code, "OK response is expected")
+	err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+	if err != nil {
+		fmt.Println("err is ", err)
+	}
+
+}
+
+func TestUserListRouter(t *testing.T){
+	var users []models.User
+	
+		request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/userList?type=new&page=1&search=", strings.NewReader(``))
+		response := httptest.NewRecorder()
+		router := mux.NewRouter()
+		router.HandleFunc("/userList", middlew.CheckBD(routers.UserList)).Methods("GET")
+		router.ServeHTTP(response, request)
+		assert.Equal(t, 201, response.Code, "OK response is expected")
+		err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+		if err != nil {
+			fmt.Println("err is ", err)
+		}
+	
+	}
+
+	func TestLowRelationshipRouter(t *testing.T) {
+		var users []models.User
+	
+		request, _ := http.NewRequest("DELETE", "https://gatornews.herokuapp.com/lowRelationship?id=6220338c9f185341ce8a7d93", strings.NewReader(``))
+		response := httptest.NewRecorder()
+		router := mux.NewRouter()
+		router.HandleFunc("/lowRelationship", middlew.CheckBD(routers.LowRelationship)).Methods("DELETE")
+		router.ServeHTTP(response, request)
+		assert.Equal(t, 201, response.Code, "OK response is expected")
+		err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+		if err != nil {
+			fmt.Println("err is ", err)
+		}
+	
+	
+	}
+	
+
+	func TestHighRelationshipRouter(t *testing.T) {
+		var users []models.User
+	
+		request, _ := http.NewRequest("POST", "https://gatornews.herokuapp.com/highRelationship?id=621bf76b40beb317228291e2", strings.NewReader(``))
+		response := httptest.NewRecorder()
+		router := mux.NewRouter()
+		router.HandleFunc("/highRelationship", middlew.CheckBD(routers.HighRelationship)).Methods("POST")
+		router.ServeHTTP(response, request)
+		assert.Equal(t, 201, response.Code, "OK response is expected")
+		err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+		if err != nil {
+			fmt.Println("err is ", err)
+		}
+	
+	
+	}
+
+	func TestConsultRelationRouter(t *testing.T){
+		var users []models.User
+		
+			request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/consultRelation?id=621bf76b40beb317228291e2", strings.NewReader(``))
+			response := httptest.NewRecorder()
+			router := mux.NewRouter()
+			router.HandleFunc("/consultRelation", middlew.CheckBD(routers.ConsultRelation)).Methods("GET")
+			router.ServeHTTP(response, request)
+			assert.Equal(t, 201, response.Code, "OK response is expected")
+			err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+			if err != nil {
+				fmt.Println("err is ", err)
+			}
+		
+		
+		}
