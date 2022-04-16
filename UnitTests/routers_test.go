@@ -196,3 +196,20 @@ func TestReadFollowersPostsRouter(t *testing.T) {
 
 
 }
+
+func TestRemovePostRouter(t *testing.T) {
+	var users []models.User
+
+	request, _ := http.NewRequest("DELETE", "https://gatornews.herokuapp.com/removePost?id=6238b1b33af5f47b275985e3", strings.NewReader(``))
+	response := httptest.NewRecorder()
+	router := mux.NewRouter()
+	router.HandleFunc("/removePost", middlew.CheckBD(routers.RemovePost)).Methods("DELETE")
+	router.ServeHTTP(response, request)
+	assert.Equal(t, 201, response.Code, "OK response is expected")
+	err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+	if err != nil {
+		fmt.Println("err is ", err)
+	}
+
+
+}
