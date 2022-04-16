@@ -180,3 +180,19 @@ func TestProcessToken(t *testing.T) {
 	}
 
 }
+func TestReadFollowersPostsRouter(t *testing.T) {
+	var users []models.User
+
+	request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/readFollowersPosts?page=1", strings.NewReader(``))
+	response := httptest.NewRecorder()
+	router := mux.NewRouter()
+	router.HandleFunc("/readFollowersPosts", middlew.CheckBD(routers.ReadFollowersPosts)).Methods("GET")
+	router.ServeHTTP(response, request)
+	assert.Equal(t, 201, response.Code, "OK response is expected")
+	err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+	if err != nil {
+		fmt.Println("err is ", err)
+	}
+
+
+}
