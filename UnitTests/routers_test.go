@@ -228,3 +228,21 @@ func TestUserListRouter(t *testing.T){
 		}
 	
 	}
+
+	func TestLowRelationshipRouter(t *testing.T) {
+		var users []models.User
+	
+		request, _ := http.NewRequest("DELETE", "https://gatornews.herokuapp.com/lowRelationship?id=6220338c9f185341ce8a7d93", strings.NewReader(``))
+		response := httptest.NewRecorder()
+		router := mux.NewRouter()
+		router.HandleFunc("/lowRelationship", middlew.CheckBD(routers.LowRelationship)).Methods("DELETE")
+		router.ServeHTTP(response, request)
+		assert.Equal(t, 201, response.Code, "OK response is expected")
+		err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+		if err != nil {
+			fmt.Println("err is ", err)
+		}
+	
+	
+	}
+	
