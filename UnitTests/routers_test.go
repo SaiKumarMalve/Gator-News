@@ -227,5 +227,4 @@ func TestUserListRouter(t *testing.T){
 			fmt.Println("err is ", err)
 		}
 	
-	
 	}
