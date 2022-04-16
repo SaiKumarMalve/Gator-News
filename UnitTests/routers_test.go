@@ -263,4 +263,20 @@ func TestUserListRouter(t *testing.T){
 	
 	
 	}
-	
+
+	func TestConsultRelationRouter(t *testing.T){
+		var users []models.User
+		
+			request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/consultRelation?id=621bf76b40beb317228291e2", strings.NewReader(``))
+			response := httptest.NewRecorder()
+			router := mux.NewRouter()
+			router.HandleFunc("/consultRelation", middlew.CheckBD(routers.ConsultRelation)).Methods("GET")
+			router.ServeHTTP(response, request)
+			assert.Equal(t, 201, response.Code, "OK response is expected")
+			err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+			if err != nil {
+				fmt.Println("err is ", err)
+			}
+		
+		
+		}
