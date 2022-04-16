@@ -6,13 +6,13 @@
 	},
 	"item": [
 		{
-			"name": "registration",
+			"name": "Registration",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Sai Kumar\",\n    \"lastname\": \"Malve\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"raw": "{\n    \"name\": \"Test11\",\n    \"lastname\": \"User\",\n    \"email\": \"testuser11@se.com\",\n    \"password\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Sai Kumar\",\n    \"lastname\": \"Malve\",\n    \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"raw": "{\n    \"name\": \"Test\",\n    \"lastname\": \"User\",\n    \"email\": \"testuser@se.com\",\n    \"password\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -101,7 +101,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"raw": "{\n   \"email\": \"testuser@se.com\",\n    \"password\": \"123456\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -129,7 +129,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"email\": \"sai.kumar.malve95@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"raw": "{\n   \"email\": \"testuser@se.com\",\n    \"password\": \"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -263,7 +263,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://gatornews.herokuapp.com/viewProfile?id=61fd8e38dd5a50799ac1e45b",
+							"raw": "https://gatornews.herokuapp.com/viewProfile?id=6220338c9f185341ce8a7d93",
 							"protocol": "https",
 							"host": [
 								"gatornews",
@@ -276,7 +276,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "61fd8e38dd5a50799ac1e45b"
+									"value": "6220338c9f185341ce8a7d93"
 								}
 							]
 						}
@@ -324,14 +324,14 @@
 			]
 		},
 		{
-			"name": "modifyProfile",
+			"name": "Modify Profile",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkOGUzOGRkNWE1MDc5OWFjMWU0NWIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIwMDAxLTAxLTAxVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQ0MDkzMzkzLCJsYXN0bmFtZSI6Ik1hbHZlIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiU2FpIEt1bWFyIiwid2Vic2l0ZSI6IiJ9.tLDzq0fZsOv3Z7CawUz8pCD0X4MCsiLtQDNhCADl5nA",
+							"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjFiZjc2YjQwYmViMzE3MjI4MjkxZTIiLCJiaW9ncmFwaHkiOiJzdHVkZW50IiwiYmlydGhkYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoiLCJlbWFpbCI6ImFsZWtoeWFnb2xsYW02OEBnbWFpbC5jb20iLCJleHAiOjE2NDg1ODU2MjAsImxhc3RuYW1lIjoiR29sbGFtdWRpIiwibG9jYXRpb24iOiJHYWluZXN2aWxsZSIsIm5hbWUiOiJBbGVraHlhIiwid2Vic2l0ZSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TYWlLdW1hck1hbHZlL0dhdG9yLU5ld3MifQ.U18E2YDgdJ-FJtKerr_KjI4YPgvoXa56qUdoho-AaSc\"",
 							"type": "string"
 						}
 					]
@@ -346,7 +346,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Sai Kumar\" ,\n    \"lastname\": \"Malve\",\n    \"birthDate\": \"1995-02-23T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am MS CS student\",\n    \"website\": \"https://github.com/SaiKumarMalve/Gator-News\"\n    \n}",
+					"raw": "{\n    \"name\":\"Alekhya\" ,\n    \"lastname\": \"Gollamudi\",\n    \"birthDate\": \"1995-02-23T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"student\",\n    \"website\": \"https://www.linkedin.com/feed/\"\n    \n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -546,19 +546,250 @@
 			]
 		},
 		{
-			"name": "modifyProfile",
+			"name": "Read Posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiJJIGFtIGEgc3R1ZGVudCIsImJpcnRoZGF0ZSI6IjE5OTktMDgtMDlUMDA6MDA6MDBaIiwiZW1haWwiOiJzYWkua3VtYXIubWFsdmU5NUBnbWFpbC5jb20iLCJleHAiOjE2NDM4NDM1NTUsImxhc3RuYW1lIjoiR29sbGFtdWRpIiwibG9jYXRpb24iOiJHYWluZXN2aWxsZSIsIm5hbWUiOiJBbGVraHlhIiwid2Vic2l0ZSI6Imh0dHBzOi8vbGVldGNvZGUuY29tL3Byb2JsZW1zL2NsaW1iaW5nLXN0YWlycy9zb2x1dGlvbi8ifQ.wdsEHnNr99F88Bqufe4iCI5hkKWB8_nr3DRxeqdqxq8",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkYjA2ZTU0MTM0MjkxYmFlYjhlZDEiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDIyLTAyLTA0VDIzOjAyOjA2LjE3NloiLCJlbWFpbCI6Imt1bWt1bXRlamFzd2luaUBnbWFpbC5jb20iLCJleHAiOjE2NDg3NjA5NzEsImxhc3RuYW1lIjoiS3Vta3VtIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiVGVqYXN3aW5pICIsIndlYnNpdGUiOiIifQ.9kcXi4T1BOd3STkM45XDfn-bIod71m5hjqOQDQh-3aY",
 							"type": "string"
 						}
 					]
 				},
-				"method": "PUT",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/readPosts?id=6220338c9f185341ce8a7d93&page=1",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"readPosts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6220338c9f185341ce8a7d93"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "readPosts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/readPosts?id=621bf76b40beb317228291e2&page=1",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"readPosts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "621bf76b40beb317228291e2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDIyLTAzLTA0VDAxOjA3OjI1LjEyM1oiLCJlbWFpbCI6InRlc3R1c2VyQHNlLmNvbSIsImV4cCI6MTY0NjQ0Mjc0NiwibGFzdG5hbWUiOiJVc2VyIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiVGVzdCIsIndlYnNpdGUiOiIifQ.7tD_XrxyEOLUkZXN-T4Az0yYTuzCW4bomwxouzRXsQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/removePost?id=6238b1b33af5f47b275985e3",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"removePost"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6238b1b33af5f47b275985e3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deletePost",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/readPosts?id=621bf76b40beb317228291e2&page=1",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"readPosts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "621bf76b40beb317228291e2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "HighRelationship",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJzdHVkZW50cyIsImJpcnRoZGF0ZSI6IjIwMjItMDMtMzFUMjA6MjI6MzAuMzg2WiIsImVtYWlsIjoidGVzdHVzZXJAc2UuY29tIiwiZXhwIjoxNjQ4ODUxOTAzLCJsYXN0bmFtZSI6IlVzZXIiLCJsb2NhdGlvbiI6IkdhaW5lc3ZpbGxlIiwibmFtZSI6IlRlc3QiLCJ3ZWJzaXRlIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2ZlZWQvIn0.g9BGUOyyYvJ1yR5f1sR-rg4RcJDtmdSDhPpqbeDpQFI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
@@ -574,7 +805,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Alekhya\" ,\n    \"lastname\": \"Gollamudi\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am a student\",\n    \"website\": \"https://leetcode.com/problems/climbing-stairs/solution/\"\n    \n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -582,25 +813,35 @@
 					}
 				},
 				"url": {
-					"raw": "{{Root}}/modifyProfile",
+					"raw": "https://gatornews.herokuapp.com/highRelationship?id=62229cd3fcae1232cfedda15",
+					"protocol": "https",
 					"host": [
-						"{{Root}}"
+						"gatornews",
+						"herokuapp",
+						"com"
 					],
 					"path": [
-						"modifyProfile"
+						"highRelationship"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62229cd3fcae1232cfedda15"
+						}
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "modifyProfile",
+					"name": "HighRelationship",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer{{token}}",
-								"type": "text"
+								"value": "{{tokens}}",
+								"type": "text",
+								"disabled": true
 							},
 							{
 								"key": "Content-Type",
@@ -610,7 +851,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Alekhya\" ,\n    \"lastname\": \"Gollamudi\",\n    \"birthDate\": \"1999-08-09T00:00:00Z\",\n    \"location\": \"Gainesville\",\n    \"biography\": \"I am a student\",\n    \"website\": \"https://leetcode.com/problems/climbing-stairs/solution/\"\n    \n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -618,7 +859,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://gatornews.herokuapp.com/modifyProfile",
+							"raw": "https://gatornews.herokuapp.com/highRelationship?id=6220338c9f185341ce8a7d93",
 							"protocol": "https",
 							"host": [
 								"gatornews",
@@ -626,39 +867,785 @@
 								"com"
 							],
 							"path": [
-								"modifyProfile"
+								"highRelationship"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6220338c9f185341ce8a7d93"
+								}
 							]
 						}
 					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "plain",
+					"_postman_previewlanguage": "",
 					"header": [
+						{}
+					],
+					"cookie": [
 						{
-							"key": "Server",
-							"value": "Cowboy"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 04 Feb 2022 03:10:40 GMT"
-						},
-						{
-							"key": "Content-Length",
-							"value": "0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 vegur"
+							"expires": "Invalid Date"
 						}
 					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "LowRelationship",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDIyLTAzLTA0VDAxOjA3OjI1LjEyM1oiLCJlbWFpbCI6InRlc3R1c2VyQHNlLmNvbSIsImV4cCI6MTY0NjQ0Mjc0NiwibGFzdG5hbWUiOiJVc2VyIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiVGVzdCIsIndlYnNpdGUiOiIifQ.7tD_XrxyEOLUkZXN-T4Az0yYTuzCW4bomwxouzRXsQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{tokens}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/lowRelationship?id=6220338c9f185341ce8a7d93",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"lowRelationship"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6220338c9f185341ce8a7d93"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LowRelationship",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{tokens}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/lowRelationship?id=6220338c9f185341ce8a7d93",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"lowRelationship"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6220338c9f185341ce8a7d93"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [
+						{}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "consultRelation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJzdHVkZW50cyIsImJpcnRoZGF0ZSI6IjIwMjItMDMtMzFUMjA6MjI6MzAuMzg2WiIsImVtYWlsIjoidGVzdHVzZXJAc2UuY29tIiwiZXhwIjoxNjQ4ODUzMjcwLCJsYXN0bmFtZSI6IlVzZXIiLCJsb2NhdGlvbiI6IkdhaW5lc3ZpbGxlIiwibmFtZSI6IlRlc3QiLCJ3ZWJzaXRlIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2ZlZWQvIn0.FXoM5Depx8JyiDkT1IwZYUhLI5g0COCOPwzK-8b5HVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/consultRelation?id=621bf76b40beb317228291e2",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"consultRelation"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "621bf76b40beb317228291e2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "consultRelation",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/consultRelation?id=6220338c9f185341ce8a7d93",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"consultRelation"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6220338c9f185341ce8a7d93"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetAvatar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJzdHVkZW50cyIsImJpcnRoZGF0ZSI6IjIwMjItMDMtMzFUMjA6MjI6MzAuMzg2WiIsImVtYWlsIjoidGVzdHVzZXJAc2UuY29tIiwiZXhwIjoxNjQ4ODUzMjcwLCJsYXN0bmFtZSI6IlVzZXIiLCJsb2NhdGlvbiI6IkdhaW5lc3ZpbGxlIiwibmFtZSI6IlRlc3QiLCJ3ZWJzaXRlIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2ZlZWQvIn0.FXoM5Depx8JyiDkT1IwZYUhLI5g0COCOPwzK-8b5HVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/getAvatar?id=621bf76b40beb317228291e2",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getAvatar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "621bf76b40beb317228291e2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAvatar",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/getAvatar?id=621bf76b40beb317228291e2",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"getAvatar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "621bf76b40beb317228291e2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetBanner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJzdHVkZW50cyIsImJpcnRoZGF0ZSI6IjIwMjItMDMtMzFUMjA6MjI6MzAuMzg2WiIsImVtYWlsIjoidGVzdHVzZXJAc2UuY29tIiwiZXhwIjoxNjQ4ODUzMjcwLCJsYXN0bmFtZSI6IlVzZXIiLCJsb2NhdGlvbiI6IkdhaW5lc3ZpbGxlIiwibmFtZSI6IlRlc3QiLCJ3ZWJzaXRlIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2ZlZWQvIn0.FXoM5Depx8JyiDkT1IwZYUhLI5g0COCOPwzK-8b5HVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/getBanner?id=621bf76b40beb317228291e2",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"getBanner"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "621bf76b40beb317228291e2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetBanner",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/getBanner?id=621bf76b40beb317228291e2",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"getBanner"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "621bf76b40beb317228291e2"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Upload Avatar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJJIGFtIE1TIENTIHN0dWRlbnQiLCJiaXJ0aGRhdGUiOiIyMDIyLTAzLTIyVDAwOjAyOjQ0LjQ5OVoiLCJlbWFpbCI6InRlc3R1c2VyQHNlLmNvbSIsImV4cCI6MTY0Nzk5NDM0NywibGFzdG5hbWUiOiJVc2VyIiwibG9jYXRpb24iOiJHYWluZXN2aWxsZSIsIm5hbWUiOiJUZXN0Iiwid2Vic2l0ZSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TYWlLdW1hck1hbHZlL0dhdG9yLU5ld3MifQ.f-_KSvD-0YWc8O9vMIYhKyCGR_-X_8qjrdhkPmo4h0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/Users/voldemort/Downloads/FullSizeRender.HEIC"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/uploadAvatar",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"uploadAvatar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "uploadAvatar",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/voldemort/Downloads/FullSizeRender.HEIC"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/uploadAvatar",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"uploadAvatar"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Upload Banner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJJIGFtIE1TIENTIHN0dWRlbnQiLCJiaXJ0aGRhdGUiOiIyMDIyLTAzLTIyVDAwOjAyOjQ0LjQ5OVoiLCJlbWFpbCI6InRlc3R1c2VyQHNlLmNvbSIsImV4cCI6MTY0Nzk5NDM0NywibGFzdG5hbWUiOiJVc2VyIiwibG9jYXRpb24iOiJHYWluZXN2aWxsZSIsIm5hbWUiOiJUZXN0Iiwid2Vic2l0ZSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TYWlLdW1hck1hbHZlL0dhdG9yLU5ld3MifQ.f-_KSvD-0YWc8O9vMIYhKyCGR_-X_8qjrdhkPmo4h0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "banner",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/uploadBanner",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"uploadBanner"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "uploadBanner",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/voldemort/Downloads/FullSizeRender.HEIC"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/uploadAvatar",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"uploadAvatar"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "userList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIwMzM4YzlmMTg1MzQxY2U4YTdkOTMiLCJiaW9ncmFwaHkiOiJzdHVkZW50cyIsImJpcnRoZGF0ZSI6IjIwMjItMDMtMzFUMjA6MjI6MzAuMzg2WiIsImVtYWlsIjoidGVzdHVzZXJAc2UuY29tIiwiZXhwIjoxNjQ4ODUxOTAzLCJsYXN0bmFtZSI6IlVzZXIiLCJsb2NhdGlvbiI6IkdhaW5lc3ZpbGxlIiwibmFtZSI6IlRlc3QiLCJ3ZWJzaXRlIjoiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2ZlZWQvIn0.g9BGUOyyYvJ1yR5f1sR-rg4RcJDtmdSDhPpqbeDpQFI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/userList?type=follow&page=1&search=",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"userList"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDAwLTAyLTIzVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQzODM0NzIxLCJsYXN0bmFtZSI6IiIsImxvY2F0aW9uIjoiIiwibmFtZSI6IlNhaSBLdW1hciIsIndlYnNpdGUiOiIifQ.inQ0JC13EaDUnt9DNtNxIZcIgEOkA2OImEOSyikzhB0",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "follow"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "userList",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/userList?type=new&page=1&search=",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"userList"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMTExMTExMTExMTExMTExMTExMTExMTIiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDAwLTAyLTIzVDAwOjAwOjAwWiIsImVtYWlsIjoic2FpLmt1bWFyLm1hbHZlOTVAZ21haWwuY29tIiwiZXhwIjoxNjQzODM0NzIxLCJsYXN0bmFtZSI6IiIsImxvY2F0aW9uIjoiIiwibmFtZSI6IlNhaSBLdW1hciIsIndlYnNpdGUiOiIifQ.inQ0JC13EaDUnt9DNtNxIZcIgEOkA2OImEOSyikzhB0",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "new"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Read Followers Posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZkYjA2ZTU0MTM0MjkxYmFlYjhlZDEiLCJiaW9ncmFwaHkiOiIiLCJiaXJ0aGRhdGUiOiIyMDIyLTAyLTA0VDIzOjAyOjA2LjE3NloiLCJlbWFpbCI6Imt1bWt1bXRlamFzd2luaUBnbWFpbC5jb20iLCJleHAiOjE2NDg3NjA5NzEsImxhc3RuYW1lIjoiS3Vta3VtIiwibG9jYXRpb24iOiIiLCJuYW1lIjoiVGVqYXN3aW5pICIsIndlYnNpdGUiOiIifQ.9kcXi4T1BOd3STkM45XDfn-bIod71m5hjqOQDQh-3aY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer{{token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gatornews.herokuapp.com/readFollowersPosts?page=1",
+					"protocol": "https",
+					"host": [
+						"gatornews",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"readFollowersPosts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Followers Posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gatornews.herokuapp.com/readFollowersPosts?page=1",
+							"protocol": "https",
+							"host": [
+								"gatornews",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"readFollowersPosts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6220338c9f185341ce8a7d93",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
 					"cookie": [],
 					"body": null
 				}
