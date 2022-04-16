@@ -210,5 +210,22 @@ func TestRemovePostRouter(t *testing.T) {
 	if err != nil {
 		fmt.Println("err is ", err)
 	}
-	
+
 }
+
+func TestUserListRouter(t *testing.T){
+	var users []models.User
+	
+		request, _ := http.NewRequest("GET", "https://gatornews.herokuapp.com/userList?type=new&page=1&search=", strings.NewReader(``))
+		response := httptest.NewRecorder()
+		router := mux.NewRouter()
+		router.HandleFunc("/userList", middlew.CheckBD(routers.UserList)).Methods("GET")
+		router.ServeHTTP(response, request)
+		assert.Equal(t, 201, response.Code, "OK response is expected")
+		err := json.Unmarshal([]byte(response.Body.Bytes()), &users)
+		if err != nil {
+			fmt.Println("err is ", err)
+		}
+	
+	
+	}
