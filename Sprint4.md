@@ -14,3 +14,17 @@ Below are the numerous functionalities incorporated within this web application.
 https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
 
 **Postman Documentation:** https://documenter.getpostman.com/view/19235697/UVktqZ3q
+
+**Project Boards:** <br />
+&nbsp;&nbsp;&nbsp;**Sprint 1:** https://github.com/users/SaiKumarMalve/projects/1 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 2:** https://github.com/SaiKumarMalve/Gator-News/projects/1 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 3:** https://github.com/SaiKumarMalve/Gator-News/projects/2 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 4:** https://github.com/SaiKumarMalve/Gator-News/projects/3 <br />
+
+**Team Members** 
+1. **Frontend**
+* Jayanth Atcha
+* Tejaswini Kumkum
+2. **Backend**
+* Sai Kumar Malve
+* Alekhya Gollamudi  
