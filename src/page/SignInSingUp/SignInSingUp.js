@@ -19,7 +19,7 @@ export default function SignInSingUp(props) {
   };
 
   return (
-    <div>
+    <div className="signInSignUp">
       <Container className="signin-signup" fluid>
         <Row>
           <LeftComponent />
