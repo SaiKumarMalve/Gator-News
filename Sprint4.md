@@ -9,3 +9,8 @@ Below are the numerous functionalities incorporated within this web application.
 2.	Follower System: User can follow and un-follow other users registered as part of app. Users are free to view list of other registered users whom they follow.
 3.	Tweet System: Users can share posts as part of text|stories|embed videos|GIFs|other content using the Buzz feature. 
 4.	Search Users: Added a Search filter under Users Menu to optimize search for a specific user.
+
+**API Documentation:**
+https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
+
+**Postman Documentation:** https://documenter.getpostman.com/view/19235697/UVktqZ3q
