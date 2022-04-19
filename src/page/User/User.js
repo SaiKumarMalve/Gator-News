@@ -47,6 +47,7 @@ import "./User.scss";
       }, [params]);
 
     return(
+        <div className="basicLayout">
         <BasicLayout className="user">
             <BannerAvatar user={user} loggedUser={loggedUser} />  
             <InfoUser user={user}></InfoUser> 
@@ -55,6 +56,7 @@ import "./User.scss";
               {tweets && <ListTweets tweets={tweets} />}
             </div>
         </BasicLayout>
+        </div>
     )
 }
 export default withRouter(User);
