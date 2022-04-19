@@ -46,7 +46,7 @@ export default function Home(props) {
       <Button onClick={moreData} className="load-more">
         {!loadingTweets ? (
           loadingTweets !== 0 ? (
-            "Get more Tweets"
+            "Get more News"
           ) : (
             "No more tweets"
           )
