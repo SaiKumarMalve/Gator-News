@@ -41,7 +41,7 @@ export default function LeftMenu(props) {
       <Link to={`/${user?._id}`}>
         <FontAwesomeIcon icon={faUser} /> Profile
       </Link>
-      <Link to="" onClick={logout}>
+      <Link to="/Gator-News/" onClick={logout}>
         <FontAwesomeIcon icon={faPowerOff} /> Logout
       </Link>
       <Button onClick={()=>setShowModal(true)}>Buzz</Button>
