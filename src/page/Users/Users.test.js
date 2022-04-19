@@ -29,5 +29,25 @@ describe('AllUsers', () => {
           screen.queryByPlaceholderText(/Search Users/i)
       });
 
-      
+      test("test_Users Initial Component",()=>{
+        const {container} = render(
+            <MemoryRouter>
+              <AllUsers/>
+            </MemoryRouter>
+        );
+        // eslint-disable-next-line testing-library/no-node-access
+        expect(container.firstChild).toHaveClass('row');
+
+       });
+
+       test("test_Users Ending Component",()=>{
+        const {container} = render(
+            <MemoryRouter>
+              <AllUsers/>
+            </MemoryRouter>
+        );
+        // eslint-disable-next-line testing-library/no-node-access
+        expect(container.lastChild).toHaveClass('row');
+
+       });
 });
