@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/gator-news/static/css/main.b1bdb7d2.css",
+    "main.js": "/gator-news/static/js/main.c64294ca.js",
+    "static/js/787.57071837.chunk.js": "/gator-news/static/js/787.57071837.chunk.js",
+    "static/media/404-Error.png": "/gator-news/static/media/404-Error.2c3a7de816b443350d42.png",
+    "static/media/gator-logo.png": "/gator-news/static/media/gator-logo.708479a13d4c4c8c85aa.png",
+    "static/media/logo-white.png": "/gator-news/static/media/logo-white.939155b22ec24dd5194b.png",
+    "static/media/alekhya.jpeg": "/gator-news/static/media/alekhya.bbb5bbce708bf8300091.jpeg",
+    "static/media/date-birth.svg": "/gator-news/static/media/date-birth.a0465456897beabca6b539ed335e076f.svg",
+    "static/media/camera.svg": "/gator-news/static/media/camera.d25775caaa8291a151822bb7942f88aa.svg",
+    "static/media/location.svg": "/gator-news/static/media/location.6b82d71cf8f9662ac7f1cd780007f99c.svg",
+    "static/media/link.svg": "/gator-news/static/media/link.9388998624eb8da0172cc3baa0229e68.svg",
+    "static/media/close.svg": "/gator-news/static/media/close.da5c42223be72e07b42078ba244d26c0.svg",
+    "index.html": "/gator-news/index.html",
+    "main.b1bdb7d2.css.map": "/gator-news/static/css/main.b1bdb7d2.css.map",
+    "main.c64294ca.js.map": "/gator-news/static/js/main.c64294ca.js.map",
+    "787.57071837.chunk.js.map": "/gator-news/static/js/787.57071837.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1bdb7d2.css",
+    "static/js/main.c64294ca.js"
+  ]
+}
