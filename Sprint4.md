@@ -2,11 +2,12 @@
 
 Frontend Demo: https://youtu.be/tiwc3ZI5bq8
 
+Cypress Testing Demo: https://youtu.be/rK9bnIE48us
+
 Backend Demo:https://youtu.be/j7ms-XshKEM
 
 Unit test cases Demo: https://youtu.be/lFgySreRFD0
 
-Cypress Testing Demo: https://youtu.be/rK9bnIE48us
 
 # Project Description:
 Gator News is a Full Stack Web Application. It is a social networking web application which lets users to share posts/news, view news/posts, and user profiles. This is a platform where students at University of Florida can interact with each other as well as know about on-going events, activities which are taking place as part of the Campus. Students are free to follow each other and share stories and posts related to the University. 
@@ -21,12 +22,19 @@ Below are the numerous functionalities incorporated within this web application.
 4.	Search Users: Added a Search filter under Users Menu to optimize search for a specific user.
 
 # Project Accomplishments:
-# Backend:
+## Backend:
 1. We have deployed our app to Heroku.
 2. We have linked our github repository with Heroku. Heroku has been configured to build and deploy the backend API whenever the main branch changes.
 3. We have added unit test cases for few functionalities.
 
-## Deploying to Heroku
+## Frontend:
+1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
+2. Did Cypress Testing for the new features that have been added. 
+3. Did Styling changes to enhance the look and feel of User Interfaces.
+4. Resolved Bug's for the features which were not working.
+5. Have made few REST Endpoint changes to host the application. 
+
+# Deploying to Heroku
 ```sh
 $ heroku create
 $ git push heroku main
@@ -56,12 +64,6 @@ https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKE
 ## Web URL (Bonus):
 https://saikumarmalve.github.io/Gator-News/
 
-# Frontend:
-1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
-2. Did Cypress Testing for the new features that have been added. 
-3. Did Styling changes to enhance the look and feel of User Interfaces.
-4. Resolved Bug's for the features which were not working.
-5. Have made few REST Endpoint changes to host the application. 
 
 
 
