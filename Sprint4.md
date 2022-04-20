@@ -1,12 +1,12 @@
 # Sprint IV
 
-Frontend Demo: https://youtu.be/4HhCG85Rz2M
+Frontend Demo: https://youtu.be/tiwc3ZI5bq8
 
 Backend Demo:https://youtu.be/j7ms-XshKEM
 
 Unit test cases Demo: https://youtu.be/lFgySreRFD0
 
-Cypress Testing Demo: 
+Cypress Testing Demo: https://youtu.be/rK9bnIE48us
 
 # Project Description:
 Gator News is a Full Stack Web Application. It is a social networking web application which lets users to share posts/news, view news/posts, and user profiles. This is a platform where students at University of Florida can interact with each other as well as know about on-going events, activities which are taking place as part of the Campus. Students are free to follow each other and share stories and posts related to the University. 
@@ -46,11 +46,7 @@ API Testing using Postman:
 ## Link to API Documentation
 https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
 
-# Frontend:
-
-
-
-# Link to Project board: <br />
+## Link to Project board: <br />
 &nbsp;&nbsp;&nbsp;**Sprint 1:** https://github.com/users/SaiKumarMalve/projects/1 <br />
 &nbsp;&nbsp;&nbsp;**Sprint 2:** https://github.com/SaiKumarMalve/Gator-News/projects/1 <br />
 &nbsp;&nbsp;&nbsp;**Sprint 3:** https://github.com/SaiKumarMalve/Gator-News/projects/2 <br />
@@ -59,6 +55,16 @@ https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKE
 &nbsp;https://github.com/SaiKumarMalve/Gator-News/projects/3#column-18361635
 ## Web URL (Bonus):
 https://saikumarmalve.github.io/Gator-News/
+
+# Frontend:
+1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
+2. Did Cypress Testing for the new features that have been added. 
+3. Did Styling changes to enhance the look and feel of User Interfaces.
+4. Resolved Bug's for the features which were not working.
+5. Have made few REST Endpoint changes to host the application. 
+
+
+
 
 # Steps for running the project:
 1. Install the node modules using "npm install" command.
