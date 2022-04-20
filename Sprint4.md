@@ -23,23 +23,42 @@ Below are the numerous functionalities incorporated within this web application.
 # Project Accomplishments:
 # Backend:
 1. We have deployed our app to Heroku.
-2. We have linked our github with Heroku. As soon as github gets updated, our heroku gets automatically updated.
+2. We have linked our github repository with Heroku. Heroku has been configured to build and deploy the backend API whenever the main branch changes.
 3. We have added unit test cases for few functionalities.
-4. /*postman*/
+
+## Deploying to Heroku
+```sh
+$ heroku create
+$ git push heroku main
+$ heroku open
+```
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://devcenter.heroku.com/articles/getting-started-with-go)
+
+## Postman Documentation
+https://documenter.getpostman.com/view/19235697/UVktqZ3q <br />
+API Testing using Postman:
+1. Go to your workspace in Postman.<br />
+2. Click on the + symbol to open a new tab.<br /> 
+3. Enter the API Endpoint where it says, “Enter request URL” and select the method (action type GET, POST, etc.) for that request as shown below. For a post method, you can also specify the body of the request in any of the formats listed.<br /> 
+4. Click on the Send button.<br /> 
  
+## Link to API Documentation
+https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
+
 # Frontend:
 
 
 
-* ***Link to API Documentation***: https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
-* **Postman Documentation:** https://documenter.getpostman.com/view/19235697/UVktqZ3q
-* ***Link to Project board:*** <br />
+# Link to Project board: <br />
 &nbsp;&nbsp;&nbsp;**Sprint 1:** https://github.com/users/SaiKumarMalve/projects/1 <br />
 &nbsp;&nbsp;&nbsp;**Sprint 2:** https://github.com/SaiKumarMalve/Gator-News/projects/1 <br />
 &nbsp;&nbsp;&nbsp;**Sprint 3:** https://github.com/SaiKumarMalve/Gator-News/projects/2 <br />
 &nbsp;&nbsp;&nbsp;**Sprint 4:** https://github.com/SaiKumarMalve/Gator-News/projects/3 <br />
-* ***Link to Sprint4 deliverables:*** &nbsp;https://github.com/SaiKumarMalve/Gator-News/projects/3#column-18361635
-* ***Web URL (Bonus):*** https://saikumarmalve.github.io/Gator-News/
+## Link to Sprint4 deliverables:  
+&nbsp;https://github.com/SaiKumarMalve/Gator-News/projects/3#column-18361635
+## Web URL (Bonus):
+https://saikumarmalve.github.io/Gator-News/
 
 # Steps for running the project:
 1. Install the node modules using "npm install" command.
