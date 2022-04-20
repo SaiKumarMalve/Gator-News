@@ -27,14 +27,6 @@ Below are the numerous functionalities incorporated within this web application.
 3. We have added unit test cases for few functionalities.
 4. /*postman*/
  
-# Frontend:
-1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
-2. Did Cypress Testing for the new features that have been added. 
-3. Did Styling changes to enhance the look and feel of User Interfaces.
-4. Resolved Bug's for the features which were not working.
-5. Have made few REST Endpoint changes to host the application. 
-
-
 * ***Link to API Documentation***: https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
 * **Postman Documentation:** https://documenter.getpostman.com/view/19235697/UVktqZ3q
 * ***Link to Project board:*** <br />
@@ -44,6 +36,16 @@ Below are the numerous functionalities incorporated within this web application.
 &nbsp;&nbsp;&nbsp;**Sprint 4:** https://github.com/SaiKumarMalve/Gator-News/projects/3 <br />
 * ***Link to Sprint4 deliverables:*** &nbsp;https://github.com/SaiKumarMalve/Gator-News/projects/3#column-18361635
 * ***Web URL (Bonus):*** https://saikumarmalve.github.io/Gator-News/
+
+# Frontend:
+1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
+2. Did Cypress Testing for the new features that have been added. 
+3. Did Styling changes to enhance the look and feel of User Interfaces.
+4. Resolved Bug's for the features which were not working.
+5. Have made few REST Endpoint changes to host the application. 
+
+
+
 
 # Steps for running the project:
 1. Install the node modules using "npm install" command.
