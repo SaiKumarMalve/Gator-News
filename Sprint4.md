@@ -33,8 +33,12 @@ Below are the numerous functionalities incorporated within this web application.
 
 * ***Link to API Documentation***: https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
 * **Postman Documentation:** https://documenter.getpostman.com/view/19235697/UVktqZ3q
-* ***Link to Project board:***
-* ***Link to Sprint4 deliverables:***
+* ***Link to Project board:*** <br />
+&nbsp;&nbsp;&nbsp;**Sprint 1:** https://github.com/users/SaiKumarMalve/projects/1 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 2:** https://github.com/SaiKumarMalve/Gator-News/projects/1 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 3:** https://github.com/SaiKumarMalve/Gator-News/projects/2 <br />
+&nbsp;&nbsp;&nbsp;**Sprint 4:** https://github.com/SaiKumarMalve/Gator-News/projects/3 <br />
+* ***Link to Sprint4 deliverables:*** &nbsp;https://github.com/SaiKumarMalve/Gator-News/projects/3#column-18361635
 * ***Web URL (Bonus):*** https://saikumarmalve.github.io/Gator-News/
 
 # Steps for running the project:
