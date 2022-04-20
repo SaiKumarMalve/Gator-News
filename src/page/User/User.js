@@ -51,7 +51,7 @@ import "./User.scss";
             <BannerAvatar user={user} loggedUser={loggedUser} />  
             <InfoUser user={user}></InfoUser> 
             <div className="user__tweets"> 
-              <h3><b>User Posts</b></h3>
+              <h3><b>User Messages</b></h3>
               {tweets && <ListTweets tweets={tweets} />}
             </div>
         </BasicLayout>
