@@ -81,7 +81,7 @@ export default function BannerAvatar(props) {
       <ConfigModal
         show={showModal}
         setShow={setShowModal}
-        title="edit profile"
+        title="Edit profile Page"
       >
         <EditUserForm user={user} setShowModal={setShowModal} />
       </ConfigModal>

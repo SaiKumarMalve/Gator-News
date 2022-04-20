@@ -46,9 +46,9 @@ export default function Home(props) {
       <Button onClick={moreData} className="load-more">
         {!loadingTweets ? (
           loadingTweets !== 0 ? (
-            "Get more News"
+            "Get more Posts"
           ) : (
-            "No more tweets"
+            "No more Posts"
           )
         ) : (
           <Spinner
@@ -70,7 +70,7 @@ function formatModel(tweets) {
     console.log(tweet)
     tweetsTemp.push({
       _id: tweet._id,
-      userID: tweet.userID,
+      userid: tweet.UserId,
       message: tweet.News.message,
       date: tweet.News.date,
       
