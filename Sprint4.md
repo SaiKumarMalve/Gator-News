@@ -28,7 +28,11 @@ Below are the numerous functionalities incorporated within this web application.
 4. /*postman*/
  
 # Frontend:
-
+1. Have written Unit Test Cases using JEST for all the un-covered and newly developed components and pages.
+2. Did Cypress Testing for the new features that have been added. 
+3. Did Styling changes to enhance the look and feel of User Interfaces.
+4. Resolved Bug's for the features which were not working.
+5. Have made few REST Endpoint changes to host the application. 
 
 
 * ***Link to API Documentation***: https://uflorida-my.sharepoint.com/:w:/g/personal/saikumar_malve_ufl_edu/Ec3aXKEQioVDtZ4B1u-44EEBdyqKsbeOWPcsdxbbxFbiOA?e=fvYtN5
