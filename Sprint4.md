@@ -1,9 +1,7 @@
 # Sprint IV
 
-Frontend Demo: 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4HhCG85Rz2M?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+Frontend Demo: https://youtu.be/4HhCG85Rz2M
+
 Backend Demo:https://youtu.be/j7ms-XshKEM
 
 Unit test cases Demo: https://youtu.be/lFgySreRFD0
