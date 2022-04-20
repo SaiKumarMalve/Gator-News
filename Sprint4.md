@@ -1,12 +1,12 @@
 # Sprint IV
 
-Frontend Demo: https://youtu.be/4HhCG85Rz2M
+Frontend Demo: https://youtu.be/tiwc3ZI5bq8
 
 Backend Demo:https://youtu.be/j7ms-XshKEM
 
 Unit test cases Demo: https://youtu.be/lFgySreRFD0
 
-Cypress Testing Demo: 
+Cypress Testing Demo: https://youtu.be/rK9bnIE48us
 
 # Project Description:
 Gator News is a Full Stack Web Application. It is a social networking web application which lets users to share posts/news, view news/posts, and user profiles. This is a platform where students at University of Florida can interact with each other as well as know about on-going events, activities which are taking place as part of the Campus. Students are free to follow each other and share stories and posts related to the University. 
