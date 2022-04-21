@@ -1,7 +1,7 @@
 {
   "name": "gator-news",
   "homepage": "https://saikumarmalve.github.io/Gator-News/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
