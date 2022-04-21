@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Gator-News/static/css/main.29f68e89.css",
-    "main.js": "/Gator-News/static/js/main.7e38ae92.js",
+    "main.css": "/Gator-News/static/css/main.2b0e83ae.css",
+    "main.js": "/Gator-News/static/js/main.9312d8a2.js",
     "static/js/787.57071837.chunk.js": "/Gator-News/static/js/787.57071837.chunk.js",
     "static/media/404-Error.png": "/Gator-News/static/media/404-Error.2c3a7de816b443350d42.png",
     "static/media/gator-logo.png": "/Gator-News/static/media/gator-logo.708479a13d4c4c8c85aa.png",
@@ -13,12 +13,12 @@
     "static/media/link.svg": "/Gator-News/static/media/link.9388998624eb8da0172cc3baa0229e68.svg",
     "static/media/close.svg": "/Gator-News/static/media/close.da5c42223be72e07b42078ba244d26c0.svg",
     "index.html": "/Gator-News/index.html",
-    "main.29f68e89.css.map": "/Gator-News/static/css/main.29f68e89.css.map",
-    "main.7e38ae92.js.map": "/Gator-News/static/js/main.7e38ae92.js.map",
+    "main.2b0e83ae.css.map": "/Gator-News/static/css/main.2b0e83ae.css.map",
+    "main.9312d8a2.js.map": "/Gator-News/static/js/main.9312d8a2.js.map",
     "787.57071837.chunk.js.map": "/Gator-News/static/js/787.57071837.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29f68e89.css",
-    "static/js/main.7e38ae92.js"
+    "static/css/main.2b0e83ae.css",
+    "static/js/main.9312d8a2.js"
   ]
 }
